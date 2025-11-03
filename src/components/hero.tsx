@@ -26,7 +26,7 @@ const Hero = () => {
           )}
         >
           <GradientText>
-            Aritect design system for building consistent, scalable interfaces.
+            Design system for building consistent, scalable interfaces.
           </GradientText>
         </h1>
         <div
@@ -47,9 +47,9 @@ const Hero = () => {
               "xl:max-w-[640px] xl:text-2xl xl:leading-9",
             )}
           >
-            A comprehensive design system powering Aritect platform. Built with modern
-            best practices and inspired by industry leaders like Radix, Tailwind, and Shadcn UI,
-            Atomic provides reusable components and algorithms.
+            A comprehensive design system powering the Aritect platform. Built with modern
+            best practices and inspired by industry leaders like Radix, Tailwind, and Shadcn UI.
+            Ship faster with production-ready components, accessible primitives, and battle-tested patterns.
           </p>
           <div className="flex space-x-4">
             <Button rounded="full" asChild>
