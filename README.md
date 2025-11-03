@@ -25,17 +25,7 @@ Atomic is a production-ready React component library built with TypeScript, Tail
 Install the package using your preferred package manager:
 
 ```sh
-# Using bun
 bun install @aritect/atomic
-
-# Using npm
-npm install @aritect/atomic
-
-# Using pnpm
-pnpm add @aritect/atomic
-
-# Using yarn
-yarn add @aritect/atomic
 ```
 
 ## Quick start
