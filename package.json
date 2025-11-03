@@ -1,6 +1,6 @@
 {
   "name": "@aritect/atomic",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Aritect design system for building consistent, scalable interfaces.",
   "repository": {
     "type": "git",
@@ -17,100 +17,165 @@
     },
     "./scss": "./target/assets/styles/main.scss",
     "./llm-docs": "./target/llm-docs",
-    "./components/context-menu": {
-      "import": "./target/components/context-menu.es.js",
-      "require": "./target/components/context-menu.cjs.js",
-      "types": "./target/types/src/ui-lib/components/context-menu.d.ts"
-    },
-    "./components/tailwind-indicator": {
-      "import": "./target/components/tailwind-indicator.es.js",
-      "require": "./target/components/tailwind-indicator.cjs.js",
-      "types": "./target/types/src/ui-lib/components/tailwind-indicator.d.ts"
-    },
-    "./components/alert": {
-      "import": "./target/components/alert.es.js",
-      "require": "./target/components/alert.cjs.js",
-      "types": "./target/types/src/ui-lib/components/alert.d.ts"
-    },
-    "./components/dashboard-view": {
-      "import": "./target/components/dashboard-view.es.js",
-      "require": "./target/components/dashboard-view.cjs.js",
-      "types": "./target/types/src/ui-lib/components/dashboard-view.d.ts"
-    },
-    "./components/data-table-pagination": {
-      "import": "./target/components/data-table-pagination.es.js",
-      "require": "./target/components/data-table-pagination.cjs.js",
-      "types": "./target/types/src/ui-lib/components/data-table-pagination.d.ts"
-    },
-    "./components/dialog": {
-      "import": "./target/components/dialog.es.js",
-      "require": "./target/components/dialog.cjs.js",
-      "types": "./target/types/src/ui-lib/components/dialog.d.ts"
-    },
-    "./components/menubar": {
-      "import": "./target/components/menubar.es.js",
-      "require": "./target/components/menubar.cjs.js",
-      "types": "./target/types/src/ui-lib/components/menubar.d.ts"
-    },
-    "./components/charts/kpi-card": {
-      "import": "./target/components/charts/kpi-card.es.js",
-      "require": "./target/components/charts/kpi-card.cjs.js",
-      "types": "./target/types/src/ui-lib/components/charts/kpi-card.d.ts"
-    },
-    "./components/charts/horizontal-segmented-chart": {
-      "import": "./target/components/charts/horizontal-segmented-chart.es.js",
-      "require": "./target/components/charts/horizontal-segmented-chart.cjs.js",
-      "types": "./target/types/src/ui-lib/components/charts/horizontal-segmented-chart.d.ts"
-    },
-    "./components/charts/chart": {
-      "import": "./target/components/charts/chart.es.js",
-      "require": "./target/components/charts/chart.cjs.js",
-      "types": "./target/types/src/ui-lib/components/charts/chart.d.ts"
-    },
-    "./components/charts/bar-chart": {
-      "import": "./target/components/charts/bar-chart.es.js",
-      "require": "./target/components/charts/bar-chart.cjs.js",
-      "types": "./target/types/src/ui-lib/components/charts/bar-chart.d.ts"
-    },
-    "./components/charts/line-chart": {
-      "import": "./target/components/charts/line-chart.es.js",
-      "require": "./target/components/charts/line-chart.cjs.js",
-      "types": "./target/types/src/ui-lib/components/charts/line-chart.d.ts"
-    },
-    "./components/charts/pie-chart": {
-      "import": "./target/components/charts/pie-chart.es.js",
-      "require": "./target/components/charts/pie-chart.cjs.js",
-      "types": "./target/types/src/ui-lib/components/charts/pie-chart.d.ts"
-    },
-    "./components/form": {
-      "import": "./target/components/form.es.js",
-      "require": "./target/components/form.cjs.js",
-      "types": "./target/types/src/ui-lib/components/form.d.ts"
-    },
-    "./components/link": {
-      "import": "./target/components/link.es.js",
-      "require": "./target/components/link.cjs.js",
-      "types": "./target/types/src/ui-lib/components/link.d.ts"
-    },
     "./components/badge": {
       "import": "./target/components/badge.es.js",
       "require": "./target/components/badge.cjs.js",
       "types": "./target/types/src/ui-lib/components/badge.d.ts"
+    },
+    "./components/tabs": {
+      "import": "./target/components/tabs.es.js",
+      "require": "./target/components/tabs.cjs.js",
+      "types": "./target/types/src/ui-lib/components/tabs.d.ts"
+    },
+    "./components/cool-mode": {
+      "import": "./target/components/cool-mode.es.js",
+      "require": "./target/components/cool-mode.cjs.js",
+      "types": "./target/types/src/ui-lib/components/cool-mode.d.ts"
+    },
+    "./components/resizable": {
+      "import": "./target/components/resizable.es.js",
+      "require": "./target/components/resizable.cjs.js",
+      "types": "./target/types/src/ui-lib/components/resizable.d.ts"
+    },
+    "./components/empty-state": {
+      "import": "./target/components/empty-state.es.js",
+      "require": "./target/components/empty-state.cjs.js",
+      "types": "./target/types/src/ui-lib/components/empty-state.d.ts"
+    },
+    "./components/slider": {
+      "import": "./target/components/slider.es.js",
+      "require": "./target/components/slider.cjs.js",
+      "types": "./target/types/src/ui-lib/components/slider.d.ts"
+    },
+    "./components/sheet": {
+      "import": "./target/components/sheet.es.js",
+      "require": "./target/components/sheet.cjs.js",
+      "types": "./target/types/src/ui-lib/components/sheet.d.ts"
+    },
+    "./components/alert-dialog": {
+      "import": "./target/components/alert-dialog.es.js",
+      "require": "./target/components/alert-dialog.cjs.js",
+      "types": "./target/types/src/ui-lib/components/alert-dialog.d.ts"
+    },
+    "./components/popover": {
+      "import": "./target/components/popover.es.js",
+      "require": "./target/components/popover.cjs.js",
+      "types": "./target/types/src/ui-lib/components/popover.d.ts"
     },
     "./components/input": {
       "import": "./target/components/input.es.js",
       "require": "./target/components/input.cjs.js",
       "types": "./target/types/src/ui-lib/components/input.d.ts"
     },
-    "./components/toggle": {
-      "import": "./target/components/toggle.es.js",
-      "require": "./target/components/toggle.cjs.js",
-      "types": "./target/types/src/ui-lib/components/toggle.d.ts"
+    "./components/data-table-faceted-filter": {
+      "import": "./target/components/data-table-faceted-filter.es.js",
+      "require": "./target/components/data-table-faceted-filter.cjs.js",
+      "types": "./target/types/src/ui-lib/components/data-table-faceted-filter.d.ts"
     },
-    "./components/box": {
-      "import": "./target/components/box.es.js",
-      "require": "./target/components/box.cjs.js",
-      "types": "./target/types/src/ui-lib/components/box.d.ts"
+    "./components/svg-mask-effect": {
+      "import": "./target/components/svg-mask-effect.es.js",
+      "require": "./target/components/svg-mask-effect.cjs.js",
+      "types": "./target/types/src/ui-lib/components/svg-mask-effect.d.ts"
+    },
+    "./components/toggle-group": {
+      "import": "./target/components/toggle-group.es.js",
+      "require": "./target/components/toggle-group.cjs.js",
+      "types": "./target/types/src/ui-lib/components/toggle-group.d.ts"
+    },
+    "./components/data-table-column-header": {
+      "import": "./target/components/data-table-column-header.es.js",
+      "require": "./target/components/data-table-column-header.cjs.js",
+      "types": "./target/types/src/ui-lib/components/data-table-column-header.d.ts"
+    },
+    "./components/input-otp": {
+      "import": "./target/components/input-otp.es.js",
+      "require": "./target/components/input-otp.cjs.js",
+      "types": "./target/types/src/ui-lib/components/input-otp.d.ts"
+    },
+    "./components/loader": {
+      "import": "./target/components/loader.es.js",
+      "require": "./target/components/loader.cjs.js",
+      "types": "./target/types/src/ui-lib/components/loader.d.ts"
+    },
+    "./components/select": {
+      "import": "./target/components/select.es.js",
+      "require": "./target/components/select.cjs.js",
+      "types": "./target/types/src/ui-lib/components/select.d.ts"
+    },
+    "./components/progress": {
+      "import": "./target/components/progress.es.js",
+      "require": "./target/components/progress.cjs.js",
+      "types": "./target/types/src/ui-lib/components/progress.d.ts"
+    },
+    "./components/aspect-ratio": {
+      "import": "./target/components/aspect-ratio.es.js",
+      "require": "./target/components/aspect-ratio.cjs.js",
+      "types": "./target/types/src/ui-lib/components/aspect-ratio.d.ts"
+    },
+    "./components/collapsible": {
+      "import": "./target/components/collapsible.es.js",
+      "require": "./target/components/collapsible.cjs.js",
+      "types": "./target/types/src/ui-lib/components/collapsible.d.ts"
+    },
+    "./components/data-table-toolbar": {
+      "import": "./target/components/data-table-toolbar.es.js",
+      "require": "./target/components/data-table-toolbar.cjs.js",
+      "types": "./target/types/src/ui-lib/components/data-table-toolbar.d.ts"
+    },
+    "./components/dropdown-menu": {
+      "import": "./target/components/dropdown-menu.es.js",
+      "require": "./target/components/dropdown-menu.cjs.js",
+      "types": "./target/types/src/ui-lib/components/dropdown-menu.d.ts"
+    },
+    "./components/gradient-button": {
+      "import": "./target/components/gradient-button.es.js",
+      "require": "./target/components/gradient-button.cjs.js",
+      "types": "./target/types/src/ui-lib/components/gradient-button.d.ts"
+    },
+    "./components/mode-toggle": {
+      "import": "./target/components/mode-toggle.es.js",
+      "require": "./target/components/mode-toggle.cjs.js",
+      "types": "./target/types/src/ui-lib/components/mode-toggle.d.ts"
+    },
+    "./components/site-header": {
+      "import": "./target/components/site-header.es.js",
+      "require": "./target/components/site-header.cjs.js",
+      "types": "./target/types/src/ui-lib/components/site-header.d.ts"
+    },
+    "./components/typography": {
+      "import": "./target/components/typography.es.js",
+      "require": "./target/components/typography.cjs.js",
+      "types": "./target/types/src/ui-lib/components/typography.d.ts"
+    },
+    "./components/carousel": {
+      "import": "./target/components/carousel.es.js",
+      "require": "./target/components/carousel.cjs.js",
+      "types": "./target/types/src/ui-lib/components/carousel.d.ts"
+    },
+    "./components/card": {
+      "import": "./target/components/card.es.js",
+      "require": "./target/components/card.cjs.js",
+      "types": "./target/types/src/ui-lib/components/card.d.ts"
+    },
+    "./components/table": {
+      "import": "./target/components/table.es.js",
+      "require": "./target/components/table.cjs.js",
+      "types": "./target/types/src/ui-lib/components/table.d.ts"
+    },
+    "./components/data-table": {
+      "import": "./target/components/data-table.es.js",
+      "require": "./target/components/data-table.cjs.js",
+      "types": "./target/types/src/ui-lib/components/data-table.d.ts"
+    },
+    "./components/menubar": {
+      "import": "./target/components/menubar.es.js",
+      "require": "./target/components/menubar.cjs.js",
+      "types": "./target/types/src/ui-lib/components/menubar.d.ts"
+    },
+    "./components/context-menu": {
+      "import": "./target/components/context-menu.es.js",
+      "require": "./target/components/context-menu.cjs.js",
+      "types": "./target/types/src/ui-lib/components/context-menu.d.ts"
     },
     "./components/hover-card": {
       "import": "./target/components/hover-card.es.js",
@@ -122,645 +187,875 @@
       "require": "./target/components/calendar.cjs.js",
       "types": "./target/types/src/ui-lib/components/calendar.d.ts"
     },
-    "./components/data-table-faceted-filter": {
-      "import": "./target/components/data-table-faceted-filter.es.js",
-      "require": "./target/components/data-table-faceted-filter.cjs.js",
-      "types": "./target/types/src/ui-lib/components/data-table-faceted-filter.d.ts"
-    },
-    "./components/carousel": {
-      "import": "./target/components/carousel.es.js",
-      "require": "./target/components/carousel.cjs.js",
-      "types": "./target/types/src/ui-lib/components/carousel.d.ts"
-    },
-    "./components/input-otp": {
-      "import": "./target/components/input-otp.es.js",
-      "require": "./target/components/input-otp.cjs.js",
-      "types": "./target/types/src/ui-lib/components/input-otp.d.ts"
-    },
-    "./components/data-table-toolbar": {
-      "import": "./target/components/data-table-toolbar.es.js",
-      "require": "./target/components/data-table-toolbar.cjs.js",
-      "types": "./target/types/src/ui-lib/components/data-table-toolbar.d.ts"
-    },
-    "./components/flex": {
-      "import": "./target/components/flex.es.js",
-      "require": "./target/components/flex.cjs.js",
-      "types": "./target/types/src/ui-lib/components/flex.d.ts"
-    },
-    "./components/navigation-menu": {
-      "import": "./target/components/navigation-menu.es.js",
-      "require": "./target/components/navigation-menu.cjs.js",
-      "types": "./target/types/src/ui-lib/components/navigation-menu.d.ts"
-    },
-    "./components/checkbox": {
-      "import": "./target/components/checkbox.es.js",
-      "require": "./target/components/checkbox.cjs.js",
-      "types": "./target/types/src/ui-lib/components/checkbox.d.ts"
-    },
-    "./components/compact-table": {
-      "import": "./target/components/compact-table.es.js",
-      "require": "./target/components/compact-table.cjs.js",
-      "types": "./target/types/src/ui-lib/components/compact-table.d.ts"
-    },
-    "./components/funny-button": {
-      "import": "./target/components/funny-button.es.js",
-      "require": "./target/components/funny-button.cjs.js",
-      "types": "./target/types/src/ui-lib/components/funny-button.d.ts"
-    },
-    "./components/cool-mode": {
-      "import": "./target/components/cool-mode.es.js",
-      "require": "./target/components/cool-mode.cjs.js",
-      "types": "./target/types/src/ui-lib/components/cool-mode.d.ts"
-    },
-    "./components/drawer": {
-      "import": "./target/components/drawer.es.js",
-      "require": "./target/components/drawer.cjs.js",
-      "types": "./target/types/src/ui-lib/components/drawer.d.ts"
-    },
-    "./components/site-header": {
-      "import": "./target/components/site-header.es.js",
-      "require": "./target/components/site-header.cjs.js",
-      "types": "./target/types/src/ui-lib/components/site-header.d.ts"
-    },
-    "./components/toaster": {
-      "import": "./target/components/toaster.es.js",
-      "require": "./target/components/toaster.cjs.js",
-      "types": "./target/types/src/ui-lib/components/toaster.d.ts"
-    },
-    "./components/loader": {
-      "import": "./target/components/loader.es.js",
-      "require": "./target/components/loader.cjs.js",
-      "types": "./target/types/src/ui-lib/components/loader.d.ts"
-    },
-    "./components/money-value": {
-      "import": "./target/components/money-value.es.js",
-      "require": "./target/components/money-value.cjs.js",
-      "types": "./target/types/src/ui-lib/components/money-value.d.ts"
-    },
-    "./components/progress": {
-      "import": "./target/components/progress.es.js",
-      "require": "./target/components/progress.cjs.js",
-      "types": "./target/types/src/ui-lib/components/progress.d.ts"
-    },
-    "./components/data-table-skeleton": {
-      "import": "./target/components/data-table-skeleton.es.js",
-      "require": "./target/components/data-table-skeleton.cjs.js",
-      "types": "./target/types/src/ui-lib/components/data-table-skeleton.d.ts"
-    },
-    "./components/sheet": {
-      "import": "./target/components/sheet.es.js",
-      "require": "./target/components/sheet.cjs.js",
-      "types": "./target/types/src/ui-lib/components/sheet.d.ts"
-    },
-    "./components/scramble": {
-      "import": "./target/components/scramble.es.js",
-      "require": "./target/components/scramble.cjs.js",
-      "types": "./target/types/src/ui-lib/components/scramble.d.ts"
-    },
-    "./components/data-table": {
-      "import": "./target/components/data-table.es.js",
-      "require": "./target/components/data-table.cjs.js",
-      "types": "./target/types/src/ui-lib/components/data-table.d.ts"
-    },
-    "./components/mode-toggle": {
-      "import": "./target/components/mode-toggle.es.js",
-      "require": "./target/components/mode-toggle.cjs.js",
-      "types": "./target/types/src/ui-lib/components/mode-toggle.d.ts"
-    },
-    "./components/resizable": {
-      "import": "./target/components/resizable.es.js",
-      "require": "./target/components/resizable.cjs.js",
-      "types": "./target/types/src/ui-lib/components/resizable.d.ts"
-    },
-    "./components/select": {
-      "import": "./target/components/select.es.js",
-      "require": "./target/components/select.cjs.js",
-      "types": "./target/types/src/ui-lib/components/select.d.ts"
-    },
-    "./components/pagination": {
-      "import": "./target/components/pagination.es.js",
-      "require": "./target/components/pagination.cjs.js",
-      "types": "./target/types/src/ui-lib/components/pagination.d.ts"
-    },
-    "./components/background-gradient-animation": {
-      "import": "./target/components/background-gradient-animation.es.js",
-      "require": "./target/components/background-gradient-animation.cjs.js",
-      "types": "./target/types/src/ui-lib/components/background-gradient-animation.d.ts"
-    },
-    "./components/text-hover-effect": {
-      "import": "./target/components/text-hover-effect.es.js",
-      "require": "./target/components/text-hover-effect.cjs.js",
-      "types": "./target/types/src/ui-lib/components/text-hover-effect.d.ts"
-    },
-    "./components/gradient-text": {
-      "import": "./target/components/gradient-text.es.js",
-      "require": "./target/components/gradient-text.cjs.js",
-      "types": "./target/types/src/ui-lib/components/gradient-text.d.ts"
-    },
-    "./components/toggle-group": {
-      "import": "./target/components/toggle-group.es.js",
-      "require": "./target/components/toggle-group.cjs.js",
-      "types": "./target/types/src/ui-lib/components/toggle-group.d.ts"
-    },
-    "./components/aspect-ratio": {
-      "import": "./target/components/aspect-ratio.es.js",
-      "require": "./target/components/aspect-ratio.cjs.js",
-      "types": "./target/types/src/ui-lib/components/aspect-ratio.d.ts"
-    },
-    "./components/tabs": {
-      "import": "./target/components/tabs.es.js",
-      "require": "./target/components/tabs.cjs.js",
-      "types": "./target/types/src/ui-lib/components/tabs.d.ts"
-    },
-    "./components/radio-group": {
-      "import": "./target/components/radio-group.es.js",
-      "require": "./target/components/radio-group.cjs.js",
-      "types": "./target/types/src/ui-lib/components/radio-group.d.ts"
-    },
-    "./components/truncated-text": {
-      "import": "./target/components/truncated-text.es.js",
-      "require": "./target/components/truncated-text.cjs.js",
-      "types": "./target/types/src/ui-lib/components/truncated-text.d.ts"
-    },
-    "./components/sidebar": {
-      "import": "./target/components/sidebar.es.js",
-      "require": "./target/components/sidebar.cjs.js",
-      "types": "./target/types/src/ui-lib/components/sidebar.d.ts"
+    "./components/textarea": {
+      "import": "./target/components/textarea.es.js",
+      "require": "./target/components/textarea.cjs.js",
+      "types": "./target/types/src/ui-lib/components/textarea.d.ts"
     },
     "./components/avatar": {
       "import": "./target/components/avatar.es.js",
       "require": "./target/components/avatar.cjs.js",
       "types": "./target/types/src/ui-lib/components/avatar.d.ts"
     },
-    "./components/trend": {
-      "import": "./target/components/trend.es.js",
-      "require": "./target/components/trend.cjs.js",
-      "types": "./target/types/src/ui-lib/components/trend.d.ts"
-    },
-    "./components/popover": {
-      "import": "./target/components/popover.es.js",
-      "require": "./target/components/popover.cjs.js",
-      "types": "./target/types/src/ui-lib/components/popover.d.ts"
-    },
-    "./components/skeleton": {
-      "import": "./target/components/skeleton.es.js",
-      "require": "./target/components/skeleton.cjs.js",
-      "types": "./target/types/src/ui-lib/components/skeleton.d.ts"
-    },
-    "./components/accordion": {
-      "import": "./target/components/accordion.es.js",
-      "require": "./target/components/accordion.cjs.js",
-      "types": "./target/types/src/ui-lib/components/accordion.d.ts"
-    },
-    "./components/shell": {
-      "import": "./target/components/shell.es.js",
-      "require": "./target/components/shell.cjs.js",
-      "types": "./target/types/src/ui-lib/components/shell.d.ts"
-    },
     "./components/separator": {
       "import": "./target/components/separator.es.js",
       "require": "./target/components/separator.cjs.js",
       "types": "./target/types/src/ui-lib/components/separator.d.ts"
     },
-    "./components/card": {
-      "import": "./target/components/card.es.js",
-      "require": "./target/components/card.cjs.js",
-      "types": "./target/types/src/ui-lib/components/card.d.ts"
-    },
-    "./components/tooltip": {
-      "import": "./target/components/tooltip.es.js",
-      "require": "./target/components/tooltip.cjs.js",
-      "types": "./target/types/src/ui-lib/components/tooltip.d.ts"
+    "./components/drawer": {
+      "import": "./target/components/drawer.es.js",
+      "require": "./target/components/drawer.cjs.js",
+      "types": "./target/types/src/ui-lib/components/drawer.d.ts"
     },
     "./components/data-table-floating-bar": {
       "import": "./target/components/data-table-floating-bar.es.js",
       "require": "./target/components/data-table-floating-bar.cjs.js",
       "types": "./target/types/src/ui-lib/components/data-table-floating-bar.d.ts"
     },
-    "./components/empty-state": {
-      "import": "./target/components/empty-state.es.js",
-      "require": "./target/components/empty-state.cjs.js",
-      "types": "./target/types/src/ui-lib/components/empty-state.d.ts"
+    "./components/scramble": {
+      "import": "./target/components/scramble.es.js",
+      "require": "./target/components/scramble.cjs.js",
+      "types": "./target/types/src/ui-lib/components/scramble.d.ts"
     },
-    "./components/login-view": {
-      "import": "./target/components/login-view.es.js",
-      "require": "./target/components/login-view.cjs.js",
-      "types": "./target/types/src/ui-lib/components/login-view.d.ts"
+    "./components/link": {
+      "import": "./target/components/link.es.js",
+      "require": "./target/components/link.cjs.js",
+      "types": "./target/types/src/ui-lib/components/link.d.ts"
     },
     "./components/command": {
       "import": "./target/components/command.es.js",
       "require": "./target/components/command.cjs.js",
       "types": "./target/types/src/ui-lib/components/command.d.ts"
     },
-    "./components/collapsible": {
-      "import": "./target/components/collapsible.es.js",
-      "require": "./target/components/collapsible.cjs.js",
-      "types": "./target/types/src/ui-lib/components/collapsible.d.ts"
-    },
-    "./components/alert-dialog": {
-      "import": "./target/components/alert-dialog.es.js",
-      "require": "./target/components/alert-dialog.cjs.js",
-      "types": "./target/types/src/ui-lib/components/alert-dialog.d.ts"
-    },
-    "./components/data-table-view-options": {
-      "import": "./target/components/data-table-view-options.es.js",
-      "require": "./target/components/data-table-view-options.cjs.js",
-      "types": "./target/types/src/ui-lib/components/data-table-view-options.d.ts"
-    },
-    "./components/slider": {
-      "import": "./target/components/slider.es.js",
-      "require": "./target/components/slider.cjs.js",
-      "types": "./target/types/src/ui-lib/components/slider.d.ts"
-    },
-    "./components/data-table-column-header": {
-      "import": "./target/components/data-table-column-header.es.js",
-      "require": "./target/components/data-table-column-header.cjs.js",
-      "types": "./target/types/src/ui-lib/components/data-table-column-header.d.ts"
-    },
-    "./components/gradient-button": {
-      "import": "./target/components/gradient-button.es.js",
-      "require": "./target/components/gradient-button.cjs.js",
-      "types": "./target/types/src/ui-lib/components/gradient-button.d.ts"
-    },
-    "./components/textarea": {
-      "import": "./target/components/textarea.es.js",
-      "require": "./target/components/textarea.cjs.js",
-      "types": "./target/types/src/ui-lib/components/textarea.d.ts"
-    },
-    "./components/typography": {
-      "import": "./target/components/typography.es.js",
-      "require": "./target/components/typography.cjs.js",
-      "types": "./target/types/src/ui-lib/components/typography.d.ts"
-    },
-    "./components/label": {
-      "import": "./target/components/label.es.js",
-      "require": "./target/components/label.cjs.js",
-      "types": "./target/types/src/ui-lib/components/label.d.ts"
+    "./components/funny-button": {
+      "import": "./target/components/funny-button.es.js",
+      "require": "./target/components/funny-button.cjs.js",
+      "types": "./target/types/src/ui-lib/components/funny-button.d.ts"
     },
     "./components/image": {
       "import": "./target/components/image.es.js",
       "require": "./target/components/image.cjs.js",
       "types": "./target/types/src/ui-lib/components/image.d.ts"
     },
-    "./components/table": {
-      "import": "./target/components/table.es.js",
-      "require": "./target/components/table.cjs.js",
-      "types": "./target/types/src/ui-lib/components/table.d.ts"
+    "./components/navigation-menu": {
+      "import": "./target/components/navigation-menu.es.js",
+      "require": "./target/components/navigation-menu.cjs.js",
+      "types": "./target/types/src/ui-lib/components/navigation-menu.d.ts"
+    },
+    "./components/tooltip": {
+      "import": "./target/components/tooltip.es.js",
+      "require": "./target/components/tooltip.cjs.js",
+      "types": "./target/types/src/ui-lib/components/tooltip.d.ts"
+    },
+    "./components/box": {
+      "import": "./target/components/box.es.js",
+      "require": "./target/components/box.cjs.js",
+      "types": "./target/types/src/ui-lib/components/box.d.ts"
+    },
+    "./components/checkbox": {
+      "import": "./target/components/checkbox.es.js",
+      "require": "./target/components/checkbox.cjs.js",
+      "types": "./target/types/src/ui-lib/components/checkbox.d.ts"
+    },
+    "./components/truncated-text": {
+      "import": "./target/components/truncated-text.es.js",
+      "require": "./target/components/truncated-text.cjs.js",
+      "types": "./target/types/src/ui-lib/components/truncated-text.d.ts"
+    },
+    "./components/flex": {
+      "import": "./target/components/flex.es.js",
+      "require": "./target/components/flex.cjs.js",
+      "types": "./target/types/src/ui-lib/components/flex.d.ts"
+    },
+    "./components/shell": {
+      "import": "./target/components/shell.es.js",
+      "require": "./target/components/shell.cjs.js",
+      "types": "./target/types/src/ui-lib/components/shell.d.ts"
+    },
+    "./components/text-hover-effect": {
+      "import": "./target/components/text-hover-effect.es.js",
+      "require": "./target/components/text-hover-effect.cjs.js",
+      "types": "./target/types/src/ui-lib/components/text-hover-effect.d.ts"
+    },
+    "./components/tailwind-indicator": {
+      "import": "./target/components/tailwind-indicator.es.js",
+      "require": "./target/components/tailwind-indicator.cjs.js",
+      "types": "./target/types/src/ui-lib/components/tailwind-indicator.d.ts"
+    },
+    "./components/toggle": {
+      "import": "./target/components/toggle.es.js",
+      "require": "./target/components/toggle.cjs.js",
+      "types": "./target/types/src/ui-lib/components/toggle.d.ts"
+    },
+    "./components/skeleton": {
+      "import": "./target/components/skeleton.es.js",
+      "require": "./target/components/skeleton.cjs.js",
+      "types": "./target/types/src/ui-lib/components/skeleton.d.ts"
+    },
+    "./components/background-gradient-animation": {
+      "import": "./target/components/background-gradient-animation.es.js",
+      "require": "./target/components/background-gradient-animation.cjs.js",
+      "types": "./target/types/src/ui-lib/components/background-gradient-animation.d.ts"
+    },
+    "./components/dashboard-view": {
+      "import": "./target/components/dashboard-view.es.js",
+      "require": "./target/components/dashboard-view.cjs.js",
+      "types": "./target/types/src/ui-lib/components/dashboard-view.d.ts"
+    },
+    "./components/charts/pie-chart": {
+      "import": "./target/components/charts/pie-chart.es.js",
+      "require": "./target/components/charts/pie-chart.cjs.js",
+      "types": "./target/types/src/ui-lib/components/charts/pie-chart.d.ts"
+    },
+    "./components/charts/horizontal-segmented-chart": {
+      "import": "./target/components/charts/horizontal-segmented-chart.es.js",
+      "require": "./target/components/charts/horizontal-segmented-chart.cjs.js",
+      "types": "./target/types/src/ui-lib/components/charts/horizontal-segmented-chart.d.ts"
+    },
+    "./components/charts/kpi-card": {
+      "import": "./target/components/charts/kpi-card.es.js",
+      "require": "./target/components/charts/kpi-card.cjs.js",
+      "types": "./target/types/src/ui-lib/components/charts/kpi-card.d.ts"
+    },
+    "./components/charts/bar-chart": {
+      "import": "./target/components/charts/bar-chart.es.js",
+      "require": "./target/components/charts/bar-chart.cjs.js",
+      "types": "./target/types/src/ui-lib/components/charts/bar-chart.d.ts"
+    },
+    "./components/charts/chart": {
+      "import": "./target/components/charts/chart.es.js",
+      "require": "./target/components/charts/chart.cjs.js",
+      "types": "./target/types/src/ui-lib/components/charts/chart.d.ts"
+    },
+    "./components/charts/line-chart": {
+      "import": "./target/components/charts/line-chart.es.js",
+      "require": "./target/components/charts/line-chart.cjs.js",
+      "types": "./target/types/src/ui-lib/components/charts/line-chart.d.ts"
+    },
+    "./components/compact-table": {
+      "import": "./target/components/compact-table.es.js",
+      "require": "./target/components/compact-table.cjs.js",
+      "types": "./target/types/src/ui-lib/components/compact-table.d.ts"
+    },
+    "./components/gradient-text": {
+      "import": "./target/components/gradient-text.es.js",
+      "require": "./target/components/gradient-text.cjs.js",
+      "types": "./target/types/src/ui-lib/components/gradient-text.d.ts"
+    },
+    "./components/toaster": {
+      "import": "./target/components/toaster.es.js",
+      "require": "./target/components/toaster.cjs.js",
+      "types": "./target/types/src/ui-lib/components/toaster.d.ts"
     },
     "./components/button": {
       "import": "./target/components/button.es.js",
       "require": "./target/components/button.cjs.js",
       "types": "./target/types/src/ui-lib/components/button.d.ts"
     },
+    "./components/dialog": {
+      "import": "./target/components/dialog.es.js",
+      "require": "./target/components/dialog.cjs.js",
+      "types": "./target/types/src/ui-lib/components/dialog.d.ts"
+    },
+    "./components/data-table-view-options": {
+      "import": "./target/components/data-table-view-options.es.js",
+      "require": "./target/components/data-table-view-options.cjs.js",
+      "types": "./target/types/src/ui-lib/components/data-table-view-options.d.ts"
+    },
     "./components/scroll-area": {
       "import": "./target/components/scroll-area.es.js",
       "require": "./target/components/scroll-area.cjs.js",
       "types": "./target/types/src/ui-lib/components/scroll-area.d.ts"
+    },
+    "./components/data-table-skeleton": {
+      "import": "./target/components/data-table-skeleton.es.js",
+      "require": "./target/components/data-table-skeleton.cjs.js",
+      "types": "./target/types/src/ui-lib/components/data-table-skeleton.d.ts"
+    },
+    "./components/sidebar": {
+      "import": "./target/components/sidebar.es.js",
+      "require": "./target/components/sidebar.cjs.js",
+      "types": "./target/types/src/ui-lib/components/sidebar.d.ts"
+    },
+    "./components/pagination": {
+      "import": "./target/components/pagination.es.js",
+      "require": "./target/components/pagination.cjs.js",
+      "types": "./target/types/src/ui-lib/components/pagination.d.ts"
+    },
+    "./components/trend": {
+      "import": "./target/components/trend.es.js",
+      "require": "./target/components/trend.cjs.js",
+      "types": "./target/types/src/ui-lib/components/trend.d.ts"
     },
     "./components/breadcrumb": {
       "import": "./target/components/breadcrumb.es.js",
       "require": "./target/components/breadcrumb.cjs.js",
       "types": "./target/types/src/ui-lib/components/breadcrumb.d.ts"
     },
-    "./components/svg-mask-effect": {
-      "import": "./target/components/svg-mask-effect.es.js",
-      "require": "./target/components/svg-mask-effect.cjs.js",
-      "types": "./target/types/src/ui-lib/components/svg-mask-effect.d.ts"
+    "./components/label": {
+      "import": "./target/components/label.es.js",
+      "require": "./target/components/label.cjs.js",
+      "types": "./target/types/src/ui-lib/components/label.d.ts"
     },
-    "./components/dropdown-menu": {
-      "import": "./target/components/dropdown-menu.es.js",
-      "require": "./target/components/dropdown-menu.cjs.js",
-      "types": "./target/types/src/ui-lib/components/dropdown-menu.d.ts"
+    "./components/data-table-pagination": {
+      "import": "./target/components/data-table-pagination.es.js",
+      "require": "./target/components/data-table-pagination.cjs.js",
+      "types": "./target/types/src/ui-lib/components/data-table-pagination.d.ts"
     },
     "./components/switch": {
       "import": "./target/components/switch.es.js",
       "require": "./target/components/switch.cjs.js",
       "types": "./target/types/src/ui-lib/components/switch.d.ts"
     },
-    "./icons/globe-icon": {
-      "import": "./target/icons/globe-icon.es.js",
-      "require": "./target/icons/globe-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/globe-icon.d.ts"
+    "./components/accordion": {
+      "import": "./target/components/accordion.es.js",
+      "require": "./target/components/accordion.cjs.js",
+      "types": "./target/types/src/ui-lib/components/accordion.d.ts"
     },
-    "./icons/study-lamp-icon": {
-      "import": "./target/icons/study-lamp-icon.es.js",
-      "require": "./target/icons/study-lamp-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/study-lamp-icon.d.ts"
+    "./components/alert": {
+      "import": "./target/components/alert.es.js",
+      "require": "./target/components/alert.cjs.js",
+      "types": "./target/types/src/ui-lib/components/alert.d.ts"
     },
-    "./icons/unfold-less-icon": {
-      "import": "./target/icons/unfold-less-icon.es.js",
-      "require": "./target/icons/unfold-less-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/unfold-less-icon.d.ts"
+    "./components/form": {
+      "import": "./target/components/form.es.js",
+      "require": "./target/components/form.cjs.js",
+      "types": "./target/types/src/ui-lib/components/form.d.ts"
     },
-    "./icons/arrow-move-down-left-icon": {
-      "import": "./target/icons/arrow-move-down-left-icon.es.js",
-      "require": "./target/icons/arrow-move-down-left-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/arrow-move-down-left-icon.d.ts"
+    "./components/money-value": {
+      "import": "./target/components/money-value.es.js",
+      "require": "./target/components/money-value.cjs.js",
+      "types": "./target/types/src/ui-lib/components/money-value.d.ts"
     },
-    "./icons/robotic-icon": {
-      "import": "./target/icons/robotic-icon.es.js",
-      "require": "./target/icons/robotic-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/robotic-icon.d.ts"
+    "./components/login-view": {
+      "import": "./target/components/login-view.es.js",
+      "require": "./target/components/login-view.cjs.js",
+      "types": "./target/types/src/ui-lib/components/login-view.d.ts"
     },
-    "./icons/close-icon": {
-      "import": "./target/icons/close-icon.es.js",
-      "require": "./target/icons/close-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/close-icon.d.ts"
+    "./components/radio-group": {
+      "import": "./target/components/radio-group.es.js",
+      "require": "./target/components/radio-group.cjs.js",
+      "types": "./target/types/src/ui-lib/components/radio-group.d.ts"
     },
-    "./icons/coins-icon": {
-      "import": "./target/icons/coins-icon.es.js",
-      "require": "./target/icons/coins-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/coins-icon.d.ts"
-    },
-    "./icons/linkedin-icon": {
-      "import": "./target/icons/linkedin-icon.es.js",
-      "require": "./target/icons/linkedin-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/linkedin-icon.d.ts"
-    },
-    "./icons/circle-help-icon": {
-      "import": "./target/icons/circle-help-icon.es.js",
-      "require": "./target/icons/circle-help-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/circle-help-icon.d.ts"
-    },
-    "./icons/bold-icon": {
-      "import": "./target/icons/bold-icon.es.js",
-      "require": "./target/icons/bold-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/bold-icon.d.ts"
-    },
-    "./icons/file-view-icon": {
-      "import": "./target/icons/file-view-icon.es.js",
-      "require": "./target/icons/file-view-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/file-view-icon.d.ts"
-    },
-    "./icons/carrot-icon": {
-      "import": "./target/icons/carrot-icon.es.js",
-      "require": "./target/icons/carrot-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/carrot-icon.d.ts"
-    },
-    "./icons/network-offline-icon": {
-      "import": "./target/icons/network-offline-icon.es.js",
-      "require": "./target/icons/network-offline-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/network-offline-icon.d.ts"
-    },
-    "./icons/save-icon": {
-      "import": "./target/icons/save-icon.es.js",
-      "require": "./target/icons/save-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/save-icon.d.ts"
-    },
-    "./icons/balance-scale-icon": {
-      "import": "./target/icons/balance-scale-icon.es.js",
-      "require": "./target/icons/balance-scale-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/balance-scale-icon.d.ts"
-    },
-    "./icons/alert-icon": {
-      "import": "./target/icons/alert-icon.es.js",
-      "require": "./target/icons/alert-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/alert-icon.d.ts"
-    },
-    "./icons/light-house-icon": {
-      "import": "./target/icons/light-house-icon.es.js",
-      "require": "./target/icons/light-house-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/light-house-icon.d.ts"
-    },
-    "./icons/arrow-down-icon": {
-      "import": "./target/icons/arrow-down-icon.es.js",
-      "require": "./target/icons/arrow-down-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/arrow-down-icon.d.ts"
-    },
-    "./icons/bell-icon": {
-      "import": "./target/icons/bell-icon.es.js",
-      "require": "./target/icons/bell-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/bell-icon.d.ts"
-    },
-    "./icons/calculator-icon": {
-      "import": "./target/icons/calculator-icon.es.js",
-      "require": "./target/icons/calculator-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/calculator-icon.d.ts"
-    },
-    "./icons/euro-sign-icon": {
-      "import": "./target/icons/euro-sign-icon.es.js",
-      "require": "./target/icons/euro-sign-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/euro-sign-icon.d.ts"
-    },
-    "./icons/circle-info-icon": {
-      "import": "./target/icons/circle-info-icon.es.js",
-      "require": "./target/icons/circle-info-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/circle-info-icon.d.ts"
-    },
-    "./icons/saturn-icon": {
-      "import": "./target/icons/saturn-icon.es.js",
-      "require": "./target/icons/saturn-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/saturn-icon.d.ts"
-    },
-    "./icons/volume-mute-icon": {
-      "import": "./target/icons/volume-mute-icon.es.js",
-      "require": "./target/icons/volume-mute-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/volume-mute-icon.d.ts"
-    },
-    "./icons/copy-icon": {
-      "import": "./target/icons/copy-icon.es.js",
-      "require": "./target/icons/copy-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/copy-icon.d.ts"
+    "./icons/circle-check-icon": {
+      "import": "./target/icons/circle-check-icon.es.js",
+      "require": "./target/icons/circle-check-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/circle-check-icon.d.ts"
     },
     "./icons/telegram-icon": {
       "import": "./target/icons/telegram-icon.es.js",
       "require": "./target/icons/telegram-icon.cjs.js",
       "types": "./target/types/src/ui-lib/icons/telegram-icon.d.ts"
     },
-    "./icons/ai-network-icon": {
-      "import": "./target/icons/ai-network-icon.es.js",
-      "require": "./target/icons/ai-network-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/ai-network-icon.d.ts"
-    },
-    "./icons/login-icon": {
-      "import": "./target/icons/login-icon.es.js",
-      "require": "./target/icons/login-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/login-icon.d.ts"
-    },
-    "./icons/ai-chat-icon": {
-      "import": "./target/icons/ai-chat-icon.es.js",
-      "require": "./target/icons/ai-chat-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/ai-chat-icon.d.ts"
-    },
     "./icons/gem-icon": {
       "import": "./target/icons/gem-icon.es.js",
       "require": "./target/icons/gem-icon.cjs.js",
       "types": "./target/types/src/ui-lib/icons/gem-icon.d.ts"
     },
-    "./icons/cells-icon": {
-      "import": "./target/icons/cells-icon.es.js",
-      "require": "./target/icons/cells-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/cells-icon.d.ts"
+    "./icons/encrypt-icon": {
+      "import": "./target/icons/encrypt-icon.es.js",
+      "require": "./target/icons/encrypt-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/encrypt-icon.d.ts"
     },
-    "./icons/unlink-icon": {
-      "import": "./target/icons/unlink-icon.es.js",
-      "require": "./target/icons/unlink-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/unlink-icon.d.ts"
+    "./icons/bold-icon": {
+      "import": "./target/icons/bold-icon.es.js",
+      "require": "./target/icons/bold-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/bold-icon.d.ts"
     },
-    "./icons/fire-security-icon": {
-      "import": "./target/icons/fire-security-icon.es.js",
-      "require": "./target/icons/fire-security-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/fire-security-icon.d.ts"
+    "./icons/calculator-icon": {
+      "import": "./target/icons/calculator-icon.es.js",
+      "require": "./target/icons/calculator-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/calculator-icon.d.ts"
     },
-    "./icons/timer-icon": {
-      "import": "./target/icons/timer-icon.es.js",
-      "require": "./target/icons/timer-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/timer-icon.d.ts"
-    },
-    "./icons/network-online-icon": {
-      "import": "./target/icons/network-online-icon.es.js",
-      "require": "./target/icons/network-online-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/network-online-icon.d.ts"
-    },
-    "./icons/file-code-icon": {
-      "import": "./target/icons/file-code-icon.es.js",
-      "require": "./target/icons/file-code-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/file-code-icon.d.ts"
-    },
-    "./icons/circle-multiplication-icon": {
-      "import": "./target/icons/circle-multiplication-icon.es.js",
-      "require": "./target/icons/circle-multiplication-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/circle-multiplication-icon.d.ts"
-    },
-    "./icons/low-signal-icon": {
-      "import": "./target/icons/low-signal-icon.es.js",
-      "require": "./target/icons/low-signal-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/low-signal-icon.d.ts"
-    },
-    "./icons/ellipsis-icon": {
-      "import": "./target/icons/ellipsis-icon.es.js",
-      "require": "./target/icons/ellipsis-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/ellipsis-icon.d.ts"
-    },
-    "./icons/volume-low-icon": {
-      "import": "./target/icons/volume-low-icon.es.js",
-      "require": "./target/icons/volume-low-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/volume-low-icon.d.ts"
-    },
-    "./icons/x-icon": {
-      "import": "./target/icons/x-icon.es.js",
-      "require": "./target/icons/x-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/x-icon.d.ts"
-    },
-    "./icons/authorized-icon": {
-      "import": "./target/icons/authorized-icon.es.js",
-      "require": "./target/icons/authorized-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/authorized-icon.d.ts"
-    },
-    "./icons/ai-search-icon": {
-      "import": "./target/icons/ai-search-icon.es.js",
-      "require": "./target/icons/ai-search-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/ai-search-icon.d.ts"
-    },
-    "./icons/bubble-chart-icon": {
-      "import": "./target/icons/bubble-chart-icon.es.js",
-      "require": "./target/icons/bubble-chart-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/bubble-chart-icon.d.ts"
-    },
-    "./icons/package-receive-icon": {
-      "import": "./target/icons/package-receive-icon.es.js",
-      "require": "./target/icons/package-receive-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/package-receive-icon.d.ts"
-    },
-    "./icons/calendar-icon": {
-      "import": "./target/icons/calendar-icon.es.js",
-      "require": "./target/icons/calendar-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/calendar-icon.d.ts"
-    },
-    "./icons/plant-icon": {
-      "import": "./target/icons/plant-icon.es.js",
-      "require": "./target/icons/plant-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/plant-icon.d.ts"
-    },
-    "./icons/trending-down-icon": {
-      "import": "./target/icons/trending-down-icon.es.js",
-      "require": "./target/icons/trending-down-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/trending-down-icon.d.ts"
-    },
-    "./icons/ai-setting-icon": {
-      "import": "./target/icons/ai-setting-icon.es.js",
-      "require": "./target/icons/ai-setting-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/ai-setting-icon.d.ts"
-    },
-    "./icons/trending-up-icon": {
-      "import": "./target/icons/trending-up-icon.es.js",
-      "require": "./target/icons/trending-up-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/trending-up-icon.d.ts"
-    },
-    "./icons/edit-icon": {
-      "import": "./target/icons/edit-icon.es.js",
-      "require": "./target/icons/edit-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/edit-icon.d.ts"
-    },
-    "./icons/arrow-move-down-right-icon": {
-      "import": "./target/icons/arrow-move-down-right-icon.es.js",
-      "require": "./target/icons/arrow-move-down-right-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/arrow-move-down-right-icon.d.ts"
-    },
-    "./icons/volume-high-icon": {
-      "import": "./target/icons/volume-high-icon.es.js",
-      "require": "./target/icons/volume-high-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/volume-high-icon.d.ts"
-    },
-    "./icons/instagram-icon": {
-      "import": "./target/icons/instagram-icon.es.js",
-      "require": "./target/icons/instagram-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/instagram-icon.d.ts"
-    },
-    "./icons/unplug-icon": {
-      "import": "./target/icons/unplug-icon.es.js",
-      "require": "./target/icons/unplug-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/unplug-icon.d.ts"
-    },
-    "./icons/search-square-icon": {
-      "import": "./target/icons/search-square-icon.es.js",
-      "require": "./target/icons/search-square-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/search-square-icon.d.ts"
-    },
-    "./icons/filter-reset-icon": {
-      "import": "./target/icons/filter-reset-icon.es.js",
-      "require": "./target/icons/filter-reset-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/filter-reset-icon.d.ts"
-    },
-    "./icons/user-icon": {
-      "import": "./target/icons/user-icon.es.js",
-      "require": "./target/icons/user-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/user-icon.d.ts"
+    "./icons/balance-scale-icon": {
+      "import": "./target/icons/balance-scale-icon.es.js",
+      "require": "./target/icons/balance-scale-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/balance-scale-icon.d.ts"
     },
     "./icons/chevrons-left-icon": {
       "import": "./target/icons/chevrons-left-icon.es.js",
       "require": "./target/icons/chevrons-left-icon.cjs.js",
       "types": "./target/types/src/ui-lib/icons/chevrons-left-icon.d.ts"
     },
-    "./icons/search-list-icon": {
-      "import": "./target/icons/search-list-icon.es.js",
-      "require": "./target/icons/search-list-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/search-list-icon.d.ts"
+    "./icons/factory-icon": {
+      "import": "./target/icons/factory-icon.es.js",
+      "require": "./target/icons/factory-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/factory-icon.d.ts"
     },
     "./icons/filter-edit-icon": {
       "import": "./target/icons/filter-edit-icon.es.js",
       "require": "./target/icons/filter-edit-icon.cjs.js",
       "types": "./target/types/src/ui-lib/icons/filter-edit-icon.d.ts"
     },
-    "./icons/minus-icon": {
-      "import": "./target/icons/minus-icon.es.js",
-      "require": "./target/icons/minus-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/minus-icon.d.ts"
+    "./icons/eye-icon": {
+      "import": "./target/icons/eye-icon.es.js",
+      "require": "./target/icons/eye-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/eye-icon.d.ts"
     },
-    "./icons/chevron-up-icon": {
-      "import": "./target/icons/chevron-up-icon.es.js",
-      "require": "./target/icons/chevron-up-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/chevron-up-icon.d.ts"
+    "./icons/customize-icon": {
+      "import": "./target/icons/customize-icon.es.js",
+      "require": "./target/icons/customize-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/customize-icon.d.ts"
+    },
+    "./icons/light-house-icon": {
+      "import": "./target/icons/light-house-icon.es.js",
+      "require": "./target/icons/light-house-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/light-house-icon.d.ts"
+    },
+    "./icons/grid-view-icon": {
+      "import": "./target/icons/grid-view-icon.es.js",
+      "require": "./target/icons/grid-view-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/grid-view-icon.d.ts"
+    },
+    "./icons/sidebar-left-icon": {
+      "import": "./target/icons/sidebar-left-icon.es.js",
+      "require": "./target/icons/sidebar-left-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/sidebar-left-icon.d.ts"
     },
     "./icons/search-icon": {
       "import": "./target/icons/search-icon.es.js",
       "require": "./target/icons/search-icon.cjs.js",
       "types": "./target/types/src/ui-lib/icons/search-icon.d.ts"
     },
+    "./icons/high-signal-icon": {
+      "import": "./target/icons/high-signal-icon.es.js",
+      "require": "./target/icons/high-signal-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/high-signal-icon.d.ts"
+    },
+    "./icons/soon-icon": {
+      "import": "./target/icons/soon-icon.es.js",
+      "require": "./target/icons/soon-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/soon-icon.d.ts"
+    },
+    "./icons/coins-icon": {
+      "import": "./target/icons/coins-icon.es.js",
+      "require": "./target/icons/coins-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/coins-icon.d.ts"
+    },
+    "./icons/magic-wand-icon": {
+      "import": "./target/icons/magic-wand-icon.es.js",
+      "require": "./target/icons/magic-wand-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/magic-wand-icon.d.ts"
+    },
+    "./icons/circle-help-icon": {
+      "import": "./target/icons/circle-help-icon.es.js",
+      "require": "./target/icons/circle-help-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/circle-help-icon.d.ts"
+    },
+    "./icons/timer-icon": {
+      "import": "./target/icons/timer-icon.es.js",
+      "require": "./target/icons/timer-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/timer-icon.d.ts"
+    },
+    "./icons/arrow-up-icon": {
+      "import": "./target/icons/arrow-up-icon.es.js",
+      "require": "./target/icons/arrow-up-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/arrow-up-icon.d.ts"
+    },
+    "./icons/file-xml-i-code-icon": {
+      "import": "./target/icons/file-xml-i-code-icon.es.js",
+      "require": "./target/icons/file-xml-i-code-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/file-xml-i-code-icon.d.ts"
+    },
+    "./icons/file-code-icon": {
+      "import": "./target/icons/file-code-icon.es.js",
+      "require": "./target/icons/file-code-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/file-code-icon.d.ts"
+    },
+    "./icons/drawing-mode-icon": {
+      "import": "./target/icons/drawing-mode-icon.es.js",
+      "require": "./target/icons/drawing-mode-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/drawing-mode-icon.d.ts"
+    },
+    "./icons/ellipsis-icon": {
+      "import": "./target/icons/ellipsis-icon.es.js",
+      "require": "./target/icons/ellipsis-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/ellipsis-icon.d.ts"
+    },
+    "./icons/menu-icon": {
+      "import": "./target/icons/menu-icon.es.js",
+      "require": "./target/icons/menu-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/menu-icon.d.ts"
+    },
+    "./icons/trash-icon": {
+      "import": "./target/icons/trash-icon.es.js",
+      "require": "./target/icons/trash-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/trash-icon.d.ts"
+    },
+    "./icons/code-icon": {
+      "import": "./target/icons/code-icon.es.js",
+      "require": "./target/icons/code-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/code-icon.d.ts"
+    },
+    "./icons/unfold-less-icon": {
+      "import": "./target/icons/unfold-less-icon.es.js",
+      "require": "./target/icons/unfold-less-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/unfold-less-icon.d.ts"
+    },
+    "./icons/calendar-icon": {
+      "import": "./target/icons/calendar-icon.es.js",
+      "require": "./target/icons/calendar-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/calendar-icon.d.ts"
+    },
+    "./icons/study-lamp-icon": {
+      "import": "./target/icons/study-lamp-icon.es.js",
+      "require": "./target/icons/study-lamp-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/study-lamp-icon.d.ts"
+    },
+    "./icons/filter-remove-icon": {
+      "import": "./target/icons/filter-remove-icon.es.js",
+      "require": "./target/icons/filter-remove-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/filter-remove-icon.d.ts"
+    },
+    "./icons/connect-icon": {
+      "import": "./target/icons/connect-icon.es.js",
+      "require": "./target/icons/connect-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/connect-icon.d.ts"
+    },
+    "./icons/payment-icon": {
+      "import": "./target/icons/payment-icon.es.js",
+      "require": "./target/icons/payment-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/payment-icon.d.ts"
+    },
+    "./icons/panel-left-icon": {
+      "import": "./target/icons/panel-left-icon.es.js",
+      "require": "./target/icons/panel-left-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/panel-left-icon.d.ts"
+    },
+    "./icons/code-arrows-icon": {
+      "import": "./target/icons/code-arrows-icon.es.js",
+      "require": "./target/icons/code-arrows-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/code-arrows-icon.d.ts"
+    },
+    "./icons/arrow-move-down-left-icon": {
+      "import": "./target/icons/arrow-move-down-left-icon.es.js",
+      "require": "./target/icons/arrow-move-down-left-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/arrow-move-down-left-icon.d.ts"
+    },
+    "./icons/link-icon": {
+      "import": "./target/icons/link-icon.es.js",
+      "require": "./target/icons/link-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/link-icon.d.ts"
+    },
+    "./icons/link-circle-icon": {
+      "import": "./target/icons/link-circle-icon.es.js",
+      "require": "./target/icons/link-circle-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/link-circle-icon.d.ts"
+    },
+    "./icons/arrow-right-icon": {
+      "import": "./target/icons/arrow-right-icon.es.js",
+      "require": "./target/icons/arrow-right-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/arrow-right-icon.d.ts"
+    },
+    "./icons/smartphone-icon": {
+      "import": "./target/icons/smartphone-icon.es.js",
+      "require": "./target/icons/smartphone-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/smartphone-icon.d.ts"
+    },
+    "./icons/volume-mute-icon": {
+      "import": "./target/icons/volume-mute-icon.es.js",
+      "require": "./target/icons/volume-mute-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/volume-mute-icon.d.ts"
+    },
+    "./icons/globe-icon": {
+      "import": "./target/icons/globe-icon.es.js",
+      "require": "./target/icons/globe-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/globe-icon.d.ts"
+    },
+    "./icons/filter-icon": {
+      "import": "./target/icons/filter-icon.es.js",
+      "require": "./target/icons/filter-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/filter-icon.d.ts"
+    },
+    "./icons/link-circle-long-icon": {
+      "import": "./target/icons/link-circle-long-icon.es.js",
+      "require": "./target/icons/link-circle-long-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/link-circle-long-icon.d.ts"
+    },
+    "./icons/fire-security-icon": {
+      "import": "./target/icons/fire-security-icon.es.js",
+      "require": "./target/icons/fire-security-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/fire-security-icon.d.ts"
+    },
+    "./icons/unplug-icon": {
+      "import": "./target/icons/unplug-icon.es.js",
+      "require": "./target/icons/unplug-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/unplug-icon.d.ts"
+    },
+    "./icons/plus-icon": {
+      "import": "./target/icons/plus-icon.es.js",
+      "require": "./target/icons/plus-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/plus-icon.d.ts"
+    },
+    "./icons/package-receive-icon": {
+      "import": "./target/icons/package-receive-icon.es.js",
+      "require": "./target/icons/package-receive-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/package-receive-icon.d.ts"
+    },
+    "./icons/circle-icon": {
+      "import": "./target/icons/circle-icon.es.js",
+      "require": "./target/icons/circle-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/circle-icon.d.ts"
+    },
+    "./icons/ai-network-icon": {
+      "import": "./target/icons/ai-network-icon.es.js",
+      "require": "./target/icons/ai-network-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/ai-network-icon.d.ts"
+    },
+    "./icons/low-signal-icon": {
+      "import": "./target/icons/low-signal-icon.es.js",
+      "require": "./target/icons/low-signal-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/low-signal-icon.d.ts"
+    },
+    "./icons/ai-chat-icon": {
+      "import": "./target/icons/ai-chat-icon.es.js",
+      "require": "./target/icons/ai-chat-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/ai-chat-icon.d.ts"
+    },
+    "./icons/underline-icon": {
+      "import": "./target/icons/underline-icon.es.js",
+      "require": "./target/icons/underline-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/underline-icon.d.ts"
+    },
+    "./icons/discover-icon": {
+      "import": "./target/icons/discover-icon.es.js",
+      "require": "./target/icons/discover-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/discover-icon.d.ts"
+    },
+    "./icons/sparkles-icon": {
+      "import": "./target/icons/sparkles-icon.es.js",
+      "require": "./target/icons/sparkles-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/sparkles-icon.d.ts"
+    },
+    "./icons/key-icon": {
+      "import": "./target/icons/key-icon.es.js",
+      "require": "./target/icons/key-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/key-icon.d.ts"
+    },
+    "./icons/waiter-icon": {
+      "import": "./target/icons/waiter-icon.es.js",
+      "require": "./target/icons/waiter-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/waiter-icon.d.ts"
+    },
+    "./icons/credit-card-icon": {
+      "import": "./target/icons/credit-card-icon.es.js",
+      "require": "./target/icons/credit-card-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/credit-card-icon.d.ts"
+    },
+    "./icons/chevrons-right-icon": {
+      "import": "./target/icons/chevrons-right-icon.es.js",
+      "require": "./target/icons/chevrons-right-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/chevrons-right-icon.d.ts"
+    },
+    "./icons/rocket-icon": {
+      "import": "./target/icons/rocket-icon.es.js",
+      "require": "./target/icons/rocket-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/rocket-icon.d.ts"
+    },
+    "./icons/alert-icon": {
+      "import": "./target/icons/alert-icon.es.js",
+      "require": "./target/icons/alert-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/alert-icon.d.ts"
+    },
+    "./icons/medium-signal-icon": {
+      "import": "./target/icons/medium-signal-icon.es.js",
+      "require": "./target/icons/medium-signal-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/medium-signal-icon.d.ts"
+    },
+    "./icons/atom-icon": {
+      "import": "./target/icons/atom-icon.es.js",
+      "require": "./target/icons/atom-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/atom-icon.d.ts"
+    },
+    "./icons/drag-drop-vertical-icon": {
+      "import": "./target/icons/drag-drop-vertical-icon.es.js",
+      "require": "./target/icons/drag-drop-vertical-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/drag-drop-vertical-icon.d.ts"
+    },
+    "./icons/moon-icon": {
+      "import": "./target/icons/moon-icon.es.js",
+      "require": "./target/icons/moon-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/moon-icon.d.ts"
+    },
+    "./icons/plant-icon": {
+      "import": "./target/icons/plant-icon.es.js",
+      "require": "./target/icons/plant-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/plant-icon.d.ts"
+    },
+    "./icons/beach-icon": {
+      "import": "./target/icons/beach-icon.es.js",
+      "require": "./target/icons/beach-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/beach-icon.d.ts"
+    },
+    "./icons/loader-icon": {
+      "import": "./target/icons/loader-icon.es.js",
+      "require": "./target/icons/loader-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/loader-icon.d.ts"
+    },
+    "./icons/settings-icon": {
+      "import": "./target/icons/settings-icon.es.js",
+      "require": "./target/icons/settings-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/settings-icon.d.ts"
+    },
+    "./icons/sort-by-up-icon": {
+      "import": "./target/icons/sort-by-up-icon.es.js",
+      "require": "./target/icons/sort-by-up-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/sort-by-up-icon.d.ts"
+    },
+    "./icons/ai-setting-icon": {
+      "import": "./target/icons/ai-setting-icon.es.js",
+      "require": "./target/icons/ai-setting-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/ai-setting-icon.d.ts"
+    },
+    "./icons/italic-icon": {
+      "import": "./target/icons/italic-icon.es.js",
+      "require": "./target/icons/italic-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/italic-icon.d.ts"
+    },
+    "./icons/unlink-icon": {
+      "import": "./target/icons/unlink-icon.es.js",
+      "require": "./target/icons/unlink-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/unlink-icon.d.ts"
+    },
+    "./icons/molecules-icon": {
+      "import": "./target/icons/molecules-icon.es.js",
+      "require": "./target/icons/molecules-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/molecules-icon.d.ts"
+    },
+    "./icons/filter-reset-icon": {
+      "import": "./target/icons/filter-reset-icon.es.js",
+      "require": "./target/icons/filter-reset-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/filter-reset-icon.d.ts"
+    },
+    "./icons/trending-down-icon": {
+      "import": "./target/icons/trending-down-icon.es.js",
+      "require": "./target/icons/trending-down-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/trending-down-icon.d.ts"
+    },
+    "./icons/paint-bucket-icon": {
+      "import": "./target/icons/paint-bucket-icon.es.js",
+      "require": "./target/icons/paint-bucket-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/paint-bucket-icon.d.ts"
+    },
+    "./icons/ai-search-icon": {
+      "import": "./target/icons/ai-search-icon.es.js",
+      "require": "./target/icons/ai-search-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/ai-search-icon.d.ts"
+    },
+    "./icons/sun-icon": {
+      "import": "./target/icons/sun-icon.es.js",
+      "require": "./target/icons/sun-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/sun-icon.d.ts"
+    },
+    "./icons/file-view-icon": {
+      "import": "./target/icons/file-view-icon.es.js",
+      "require": "./target/icons/file-view-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/file-view-icon.d.ts"
+    },
+    "./icons/check-icon": {
+      "import": "./target/icons/check-icon.es.js",
+      "require": "./target/icons/check-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/check-icon.d.ts"
+    },
+    "./icons/robotic-icon": {
+      "import": "./target/icons/robotic-icon.es.js",
+      "require": "./target/icons/robotic-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/robotic-icon.d.ts"
+    },
+    "./icons/lock-icon": {
+      "import": "./target/icons/lock-icon.es.js",
+      "require": "./target/icons/lock-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/lock-icon.d.ts"
+    },
+    "./icons/linkedin-icon": {
+      "import": "./target/icons/linkedin-icon.es.js",
+      "require": "./target/icons/linkedin-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/linkedin-icon.d.ts"
+    },
+    "./icons/ai-icon": {
+      "import": "./target/icons/ai-icon.es.js",
+      "require": "./target/icons/ai-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/ai-icon.d.ts"
+    },
+    "./icons/seo-icon": {
+      "import": "./target/icons/seo-icon.es.js",
+      "require": "./target/icons/seo-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/seo-icon.d.ts"
+    },
+    "./icons/sort-by-down-icon": {
+      "import": "./target/icons/sort-by-down-icon.es.js",
+      "require": "./target/icons/sort-by-down-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/sort-by-down-icon.d.ts"
+    },
+    "./icons/authorized-icon": {
+      "import": "./target/icons/authorized-icon.es.js",
+      "require": "./target/icons/authorized-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/authorized-icon.d.ts"
+    },
+    "./icons/chevron-down-icon": {
+      "import": "./target/icons/chevron-down-icon.es.js",
+      "require": "./target/icons/chevron-down-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/chevron-down-icon.d.ts"
+    },
+    "./icons/volume-low-icon": {
+      "import": "./target/icons/volume-low-icon.es.js",
+      "require": "./target/icons/volume-low-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/volume-low-icon.d.ts"
+    },
+    "./icons/search-square-icon": {
+      "import": "./target/icons/search-square-icon.es.js",
+      "require": "./target/icons/search-square-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/search-square-icon.d.ts"
+    },
+    "./icons/sort-icon": {
+      "import": "./target/icons/sort-icon.es.js",
+      "require": "./target/icons/sort-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/sort-icon.d.ts"
+    },
     "./icons/signature-icon": {
       "import": "./target/icons/signature-icon.es.js",
       "require": "./target/icons/signature-icon.cjs.js",
       "types": "./target/types/src/ui-lib/icons/signature-icon.d.ts"
+    },
+    "./icons/zap-icon": {
+      "import": "./target/icons/zap-icon.es.js",
+      "require": "./target/icons/zap-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/zap-icon.d.ts"
+    },
+    "./icons/chevron-left-icon": {
+      "import": "./target/icons/chevron-left-icon.es.js",
+      "require": "./target/icons/chevron-left-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/chevron-left-icon.d.ts"
+    },
+    "./icons/chevron-up-icon": {
+      "import": "./target/icons/chevron-up-icon.es.js",
+      "require": "./target/icons/chevron-up-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/chevron-up-icon.d.ts"
+    },
+    "./icons/chart-column-icon": {
+      "import": "./target/icons/chart-column-icon.es.js",
+      "require": "./target/icons/chart-column-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/chart-column-icon.d.ts"
+    },
+    "./icons/bubble-chart-icon": {
+      "import": "./target/icons/bubble-chart-icon.es.js",
+      "require": "./target/icons/bubble-chart-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/bubble-chart-icon.d.ts"
+    },
+    "./icons/menu-collapse-icon": {
+      "import": "./target/icons/menu-collapse-icon.es.js",
+      "require": "./target/icons/menu-collapse-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/menu-collapse-icon.d.ts"
+    },
+    "./icons/checkmark-badge-icon": {
+      "import": "./target/icons/checkmark-badge-icon.es.js",
+      "require": "./target/icons/checkmark-badge-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/checkmark-badge-icon.d.ts"
+    },
+    "./icons/fire-icon": {
+      "import": "./target/icons/fire-icon.es.js",
+      "require": "./target/icons/fire-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/fire-icon.d.ts"
+    },
+    "./icons/alert-hexagon-icon": {
+      "import": "./target/icons/alert-hexagon-icon.es.js",
+      "require": "./target/icons/alert-hexagon-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/alert-hexagon-icon.d.ts"
+    },
+    "./icons/search-list-icon": {
+      "import": "./target/icons/search-list-icon.es.js",
+      "require": "./target/icons/search-list-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/search-list-icon.d.ts"
+    },
+    "./icons/edit-icon": {
+      "import": "./target/icons/edit-icon.es.js",
+      "require": "./target/icons/edit-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/edit-icon.d.ts"
+    },
+    "./icons/scatter-chart-icon": {
+      "import": "./target/icons/scatter-chart-icon.es.js",
+      "require": "./target/icons/scatter-chart-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/scatter-chart-icon.d.ts"
+    },
+    "./icons/recycle-icon": {
+      "import": "./target/icons/recycle-icon.es.js",
+      "require": "./target/icons/recycle-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/recycle-icon.d.ts"
+    },
+    "./icons/arrow-left-icon": {
+      "import": "./target/icons/arrow-left-icon.es.js",
+      "require": "./target/icons/arrow-left-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/arrow-left-icon.d.ts"
+    },
+    "./icons/network-offline-icon": {
+      "import": "./target/icons/network-offline-icon.es.js",
+      "require": "./target/icons/network-offline-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/network-offline-icon.d.ts"
+    },
+    "./icons/circle-info-icon": {
+      "import": "./target/icons/circle-info-icon.es.js",
+      "require": "./target/icons/circle-info-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/circle-info-icon.d.ts"
+    },
+    "./icons/arrow-down-icon": {
+      "import": "./target/icons/arrow-down-icon.es.js",
+      "require": "./target/icons/arrow-down-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/arrow-down-icon.d.ts"
+    },
+    "./icons/cells-icon": {
+      "import": "./target/icons/cells-icon.es.js",
+      "require": "./target/icons/cells-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/cells-icon.d.ts"
+    },
+    "./icons/customer-icon": {
+      "import": "./target/icons/customer-icon.es.js",
+      "require": "./target/icons/customer-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/customer-icon.d.ts"
+    },
+    "./icons/pause-icon": {
+      "import": "./target/icons/pause-icon.es.js",
+      "require": "./target/icons/pause-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/pause-icon.d.ts"
+    },
+    "./icons/circle-multiplication-icon": {
+      "import": "./target/icons/circle-multiplication-icon.es.js",
+      "require": "./target/icons/circle-multiplication-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/circle-multiplication-icon.d.ts"
+    },
+    "./icons/save-icon": {
+      "import": "./target/icons/save-icon.es.js",
+      "require": "./target/icons/save-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/save-icon.d.ts"
+    },
+    "./icons/dollar-sign-icon": {
+      "import": "./target/icons/dollar-sign-icon.es.js",
+      "require": "./target/icons/dollar-sign-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/dollar-sign-icon.d.ts"
+    },
+    "./icons/login-icon": {
+      "import": "./target/icons/login-icon.es.js",
+      "require": "./target/icons/login-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/login-icon.d.ts"
+    },
+    "./icons/arrow-move-down-right-icon": {
+      "import": "./target/icons/arrow-move-down-right-icon.es.js",
+      "require": "./target/icons/arrow-move-down-right-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/arrow-move-down-right-icon.d.ts"
+    },
+    "./icons/github-icon": {
+      "import": "./target/icons/github-icon.es.js",
+      "require": "./target/icons/github-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/github-icon.d.ts"
+    },
+    "./icons/binary-icon": {
+      "import": "./target/icons/binary-icon.es.js",
+      "require": "./target/icons/binary-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/binary-icon.d.ts"
+    },
+    "./icons/danger-icon": {
+      "import": "./target/icons/danger-icon.es.js",
+      "require": "./target/icons/danger-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/danger-icon.d.ts"
     },
     "./icons/colors-icon": {
       "import": "./target/icons/colors-icon.es.js",
@@ -772,470 +1067,155 @@
       "require": "./target/icons/circle-plus-icon.cjs.js",
       "types": "./target/types/src/ui-lib/icons/circle-plus-icon.d.ts"
     },
-    "./icons/chart-column-icon": {
-      "import": "./target/icons/chart-column-icon.es.js",
-      "require": "./target/icons/chart-column-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/chart-column-icon.d.ts"
+    "./icons/paint-brush-icon": {
+      "import": "./target/icons/paint-brush-icon.es.js",
+      "require": "./target/icons/paint-brush-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/paint-brush-icon.d.ts"
     },
-    "./icons/factory-icon": {
-      "import": "./target/icons/factory-icon.es.js",
-      "require": "./target/icons/factory-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/factory-icon.d.ts"
-    },
-    "./icons/scatter-chart-icon": {
-      "import": "./target/icons/scatter-chart-icon.es.js",
-      "require": "./target/icons/scatter-chart-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/scatter-chart-icon.d.ts"
-    },
-    "./icons/panel-left-icon": {
-      "import": "./target/icons/panel-left-icon.es.js",
-      "require": "./target/icons/panel-left-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/panel-left-icon.d.ts"
-    },
-    "./icons/menu-icon": {
-      "import": "./target/icons/menu-icon.es.js",
-      "require": "./target/icons/menu-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/menu-icon.d.ts"
-    },
-    "./icons/laurel-wreath-first-icon": {
-      "import": "./target/icons/laurel-wreath-first-icon.es.js",
-      "require": "./target/icons/laurel-wreath-first-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/laurel-wreath-first-icon.d.ts"
-    },
-    "./icons/sort-by-down-icon": {
-      "import": "./target/icons/sort-by-down-icon.es.js",
-      "require": "./target/icons/sort-by-down-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/sort-by-down-icon.d.ts"
-    },
-    "./icons/customer-icon": {
-      "import": "./target/icons/customer-icon.es.js",
-      "require": "./target/icons/customer-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/customer-icon.d.ts"
-    },
-    "./icons/chevron-right-icon": {
-      "import": "./target/icons/chevron-right-icon.es.js",
-      "require": "./target/icons/chevron-right-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/chevron-right-icon.d.ts"
-    },
-    "./icons/link-circle-icon": {
-      "import": "./target/icons/link-circle-icon.es.js",
-      "require": "./target/icons/link-circle-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/link-circle-icon.d.ts"
-    },
-    "./icons/circle-more-horizontal-icon": {
-      "import": "./target/icons/circle-more-horizontal-icon.es.js",
-      "require": "./target/icons/circle-more-horizontal-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/circle-more-horizontal-icon.d.ts"
-    },
-    "./icons/grid-view-icon": {
-      "import": "./target/icons/grid-view-icon.es.js",
-      "require": "./target/icons/grid-view-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/grid-view-icon.d.ts"
-    },
-    "./icons/unfold-more-icon": {
-      "import": "./target/icons/unfold-more-icon.es.js",
-      "require": "./target/icons/unfold-more-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/unfold-more-icon.d.ts"
-    },
-    "./icons/canvas-icon": {
-      "import": "./target/icons/canvas-icon.es.js",
-      "require": "./target/icons/canvas-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/canvas-icon.d.ts"
-    },
-    "./icons/connect-icon": {
-      "import": "./target/icons/connect-icon.es.js",
-      "require": "./target/icons/connect-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/connect-icon.d.ts"
-    },
-    "./icons/settings-cog-icon": {
-      "import": "./target/icons/settings-cog-icon.es.js",
-      "require": "./target/icons/settings-cog-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/settings-cog-icon.d.ts"
-    },
-    "./icons/alert-hexagon-icon": {
-      "import": "./target/icons/alert-hexagon-icon.es.js",
-      "require": "./target/icons/alert-hexagon-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/alert-hexagon-icon.d.ts"
-    },
-    "./icons/paint-bucket-icon": {
-      "import": "./target/icons/paint-bucket-icon.es.js",
-      "require": "./target/icons/paint-bucket-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/paint-bucket-icon.d.ts"
-    },
-    "./icons/nano-technology-icon": {
-      "import": "./target/icons/nano-technology-icon.es.js",
-      "require": "./target/icons/nano-technology-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/nano-technology-icon.d.ts"
-    },
-    "./icons/eye-icon": {
-      "import": "./target/icons/eye-icon.es.js",
-      "require": "./target/icons/eye-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/eye-icon.d.ts"
-    },
-    "./icons/recycle-icon": {
-      "import": "./target/icons/recycle-icon.es.js",
-      "require": "./target/icons/recycle-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/recycle-icon.d.ts"
-    },
-    "./icons/check-icon": {
-      "import": "./target/icons/check-icon.es.js",
-      "require": "./target/icons/check-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/check-icon.d.ts"
-    },
-    "./icons/medium-signal-icon": {
-      "import": "./target/icons/medium-signal-icon.es.js",
-      "require": "./target/icons/medium-signal-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/medium-signal-icon.d.ts"
-    },
-    "./icons/arrow-left-icon": {
-      "import": "./target/icons/arrow-left-icon.es.js",
-      "require": "./target/icons/arrow-left-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/arrow-left-icon.d.ts"
+    "./icons/copy-icon": {
+      "import": "./target/icons/copy-icon.es.js",
+      "require": "./target/icons/copy-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/copy-icon.d.ts"
     },
     "./icons/smile-icon": {
       "import": "./target/icons/smile-icon.es.js",
       "require": "./target/icons/smile-icon.cjs.js",
       "types": "./target/types/src/ui-lib/icons/smile-icon.d.ts"
     },
-    "./icons/market-analysis-icon": {
-      "import": "./target/icons/market-analysis-icon.es.js",
-      "require": "./target/icons/market-analysis-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/market-analysis-icon.d.ts"
+    "./icons/minus-icon": {
+      "import": "./target/icons/minus-icon.es.js",
+      "require": "./target/icons/minus-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/minus-icon.d.ts"
     },
-    "./icons/settings-icon": {
-      "import": "./target/icons/settings-icon.es.js",
-      "require": "./target/icons/settings-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/settings-icon.d.ts"
+    "./icons/network-online-icon": {
+      "import": "./target/icons/network-online-icon.es.js",
+      "require": "./target/icons/network-online-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/network-online-icon.d.ts"
     },
-    "./icons/sidebar-left-icon": {
-      "import": "./target/icons/sidebar-left-icon.es.js",
-      "require": "./target/icons/sidebar-left-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/sidebar-left-icon.d.ts"
-    },
-    "./icons/link-circle-long-icon": {
-      "import": "./target/icons/link-circle-long-icon.es.js",
-      "require": "./target/icons/link-circle-long-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/link-circle-long-icon.d.ts"
-    },
-    "./icons/customize-icon": {
-      "import": "./target/icons/customize-icon.es.js",
-      "require": "./target/icons/customize-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/customize-icon.d.ts"
-    },
-    "./icons/binary-icon": {
-      "import": "./target/icons/binary-icon.es.js",
-      "require": "./target/icons/binary-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/binary-icon.d.ts"
-    },
-    "./icons/chevron-down-icon": {
-      "import": "./target/icons/chevron-down-icon.es.js",
-      "require": "./target/icons/chevron-down-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/chevron-down-icon.d.ts"
-    },
-    "./icons/waiter-icon": {
-      "import": "./target/icons/waiter-icon.es.js",
-      "require": "./target/icons/waiter-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/waiter-icon.d.ts"
-    },
-    "./icons/checkmark-badge-icon": {
-      "import": "./target/icons/checkmark-badge-icon.es.js",
-      "require": "./target/icons/checkmark-badge-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/checkmark-badge-icon.d.ts"
-    },
-    "./icons/seo-icon": {
-      "import": "./target/icons/seo-icon.es.js",
-      "require": "./target/icons/seo-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/seo-icon.d.ts"
-    },
-    "./icons/sparkles-icon": {
-      "import": "./target/icons/sparkles-icon.es.js",
-      "require": "./target/icons/sparkles-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/sparkles-icon.d.ts"
-    },
-    "./icons/filter-remove-icon": {
-      "import": "./target/icons/filter-remove-icon.es.js",
-      "require": "./target/icons/filter-remove-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/filter-remove-icon.d.ts"
-    },
-    "./icons/filter-icon": {
-      "import": "./target/icons/filter-icon.es.js",
-      "require": "./target/icons/filter-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/filter-icon.d.ts"
-    },
-    "./icons/paint-brush-icon": {
-      "import": "./target/icons/paint-brush-icon.es.js",
-      "require": "./target/icons/paint-brush-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/paint-brush-icon.d.ts"
-    },
-    "./icons/credit-card-icon": {
-      "import": "./target/icons/credit-card-icon.es.js",
-      "require": "./target/icons/credit-card-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/credit-card-icon.d.ts"
-    },
-    "./icons/sort-by-up-icon": {
-      "import": "./target/icons/sort-by-up-icon.es.js",
-      "require": "./target/icons/sort-by-up-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/sort-by-up-icon.d.ts"
-    },
-    "./icons/layout-icon": {
-      "import": "./target/icons/layout-icon.es.js",
-      "require": "./target/icons/layout-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/layout-icon.d.ts"
-    },
-    "./icons/sort-icon": {
-      "import": "./target/icons/sort-icon.es.js",
-      "require": "./target/icons/sort-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/sort-icon.d.ts"
-    },
-    "./icons/arrow-right-icon": {
-      "import": "./target/icons/arrow-right-icon.es.js",
-      "require": "./target/icons/arrow-right-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/arrow-right-icon.d.ts"
-    },
-    "./icons/encrypt-icon": {
-      "import": "./target/icons/encrypt-icon.es.js",
-      "require": "./target/icons/encrypt-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/encrypt-icon.d.ts"
-    },
-    "./icons/menu-collapse-icon": {
-      "import": "./target/icons/menu-collapse-icon.es.js",
-      "require": "./target/icons/menu-collapse-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/menu-collapse-icon.d.ts"
-    },
-    "./icons/link-icon": {
-      "import": "./target/icons/link-icon.es.js",
-      "require": "./target/icons/link-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/link-icon.d.ts"
-    },
-    "./icons/code-icon": {
-      "import": "./target/icons/code-icon.es.js",
-      "require": "./target/icons/code-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/code-icon.d.ts"
-    },
-    "./icons/magic-wand-icon": {
-      "import": "./target/icons/magic-wand-icon.es.js",
-      "require": "./target/icons/magic-wand-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/magic-wand-icon.d.ts"
-    },
-    "./icons/beach-icon": {
-      "import": "./target/icons/beach-icon.es.js",
-      "require": "./target/icons/beach-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/beach-icon.d.ts"
-    },
-    "./icons/fire-icon": {
-      "import": "./target/icons/fire-icon.es.js",
-      "require": "./target/icons/fire-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/fire-icon.d.ts"
-    },
-    "./icons/high-signal-icon": {
-      "import": "./target/icons/high-signal-icon.es.js",
-      "require": "./target/icons/high-signal-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/high-signal-icon.d.ts"
-    },
-    "./icons/underline-icon": {
-      "import": "./target/icons/underline-icon.es.js",
-      "require": "./target/icons/underline-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/underline-icon.d.ts"
-    },
-    "./icons/soon-icon": {
-      "import": "./target/icons/soon-icon.es.js",
-      "require": "./target/icons/soon-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/soon-icon.d.ts"
-    },
-    "./icons/italic-icon": {
-      "import": "./target/icons/italic-icon.es.js",
-      "require": "./target/icons/italic-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/italic-icon.d.ts"
-    },
-    "./icons/circle-check-icon": {
-      "import": "./target/icons/circle-check-icon.es.js",
-      "require": "./target/icons/circle-check-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/circle-check-icon.d.ts"
-    },
-    "./icons/sun-icon": {
-      "import": "./target/icons/sun-icon.es.js",
-      "require": "./target/icons/sun-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/sun-icon.d.ts"
-    },
-    "./icons/github-icon": {
-      "import": "./target/icons/github-icon.es.js",
-      "require": "./target/icons/github-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/github-icon.d.ts"
-    },
-    "./icons/pause-icon": {
-      "import": "./target/icons/pause-icon.es.js",
-      "require": "./target/icons/pause-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/pause-icon.d.ts"
-    },
-    "./icons/zap-icon": {
-      "import": "./target/icons/zap-icon.es.js",
-      "require": "./target/icons/zap-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/zap-icon.d.ts"
-    },
-    "./icons/logout-icon": {
-      "import": "./target/icons/logout-icon.es.js",
-      "require": "./target/icons/logout-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/logout-icon.d.ts"
-    },
-    "./icons/dollar-sign-icon": {
-      "import": "./target/icons/dollar-sign-icon.es.js",
-      "require": "./target/icons/dollar-sign-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/dollar-sign-icon.d.ts"
-    },
-    "./icons/play-icon": {
-      "import": "./target/icons/play-icon.es.js",
-      "require": "./target/icons/play-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/play-icon.d.ts"
-    },
-    "./icons/discover-icon": {
-      "import": "./target/icons/discover-icon.es.js",
-      "require": "./target/icons/discover-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/discover-icon.d.ts"
-    },
-    "./icons/loader-icon": {
-      "import": "./target/icons/loader-icon.es.js",
-      "require": "./target/icons/loader-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/loader-icon.d.ts"
-    },
-    "./icons/trash-icon": {
-      "import": "./target/icons/trash-icon.es.js",
-      "require": "./target/icons/trash-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/trash-icon.d.ts"
-    },
-    "./icons/chevrons-right-icon": {
-      "import": "./target/icons/chevrons-right-icon.es.js",
-      "require": "./target/icons/chevrons-right-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/chevrons-right-icon.d.ts"
-    },
-    "./icons/contracts-icon": {
-      "import": "./target/icons/contracts-icon.es.js",
-      "require": "./target/icons/contracts-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/contracts-icon.d.ts"
-    },
-    "./icons/danger-icon": {
-      "import": "./target/icons/danger-icon.es.js",
-      "require": "./target/icons/danger-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/danger-icon.d.ts"
-    },
-    "./icons/key-icon": {
-      "import": "./target/icons/key-icon.es.js",
-      "require": "./target/icons/key-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/key-icon.d.ts"
-    },
-    "./icons/chevron-left-icon": {
-      "import": "./target/icons/chevron-left-icon.es.js",
-      "require": "./target/icons/chevron-left-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/chevron-left-icon.d.ts"
-    },
-    "./icons/moon-icon": {
-      "import": "./target/icons/moon-icon.es.js",
-      "require": "./target/icons/moon-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/moon-icon.d.ts"
+    "./icons/carrot-icon": {
+      "import": "./target/icons/carrot-icon.es.js",
+      "require": "./target/icons/carrot-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/carrot-icon.d.ts"
     },
     "./icons/eye-off-icon": {
       "import": "./target/icons/eye-off-icon.es.js",
       "require": "./target/icons/eye-off-icon.cjs.js",
       "types": "./target/types/src/ui-lib/icons/eye-off-icon.d.ts"
     },
-    "./icons/plus-icon": {
-      "import": "./target/icons/plus-icon.es.js",
-      "require": "./target/icons/plus-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/plus-icon.d.ts"
+    "./icons/market-analysis-icon": {
+      "import": "./target/icons/market-analysis-icon.es.js",
+      "require": "./target/icons/market-analysis-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/market-analysis-icon.d.ts"
     },
-    "./icons/drag-drop-vertical-icon": {
-      "import": "./target/icons/drag-drop-vertical-icon.es.js",
-      "require": "./target/icons/drag-drop-vertical-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/drag-drop-vertical-icon.d.ts"
+    "./icons/chevron-right-icon": {
+      "import": "./target/icons/chevron-right-icon.es.js",
+      "require": "./target/icons/chevron-right-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/chevron-right-icon.d.ts"
     },
-    "./icons/lock-icon": {
-      "import": "./target/icons/lock-icon.es.js",
-      "require": "./target/icons/lock-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/lock-icon.d.ts"
+    "./icons/canvas-icon": {
+      "import": "./target/icons/canvas-icon.es.js",
+      "require": "./target/icons/canvas-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/canvas-icon.d.ts"
     },
-    "./icons/file-xml-i-code-icon": {
-      "import": "./target/icons/file-xml-i-code-icon.es.js",
-      "require": "./target/icons/file-xml-i-code-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/file-xml-i-code-icon.d.ts"
-    },
-    "./icons/circle-icon": {
-      "import": "./target/icons/circle-icon.es.js",
-      "require": "./target/icons/circle-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/circle-icon.d.ts"
-    },
-    "./icons/molecules-icon": {
-      "import": "./target/icons/molecules-icon.es.js",
-      "require": "./target/icons/molecules-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/molecules-icon.d.ts"
-    },
-    "./icons/arrow-up-icon": {
-      "import": "./target/icons/arrow-up-icon.es.js",
-      "require": "./target/icons/arrow-up-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/arrow-up-icon.d.ts"
-    },
-    "./icons/search-circle-icon": {
-      "import": "./target/icons/search-circle-icon.es.js",
-      "require": "./target/icons/search-circle-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/search-circle-icon.d.ts"
-    },
-    "./icons/atom-icon": {
-      "import": "./target/icons/atom-icon.es.js",
-      "require": "./target/icons/atom-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/atom-icon.d.ts"
-    },
-    "./icons/rocket-icon": {
-      "import": "./target/icons/rocket-icon.es.js",
-      "require": "./target/icons/rocket-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/rocket-icon.d.ts"
-    },
-    "./icons/drawing-mode-icon": {
-      "import": "./target/icons/drawing-mode-icon.es.js",
-      "require": "./target/icons/drawing-mode-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/drawing-mode-icon.d.ts"
-    },
-    "./icons/ai-icon": {
-      "import": "./target/icons/ai-icon.es.js",
-      "require": "./target/icons/ai-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/ai-icon.d.ts"
-    },
-    "./icons/code-arrows-icon": {
-      "import": "./target/icons/code-arrows-icon.es.js",
-      "require": "./target/icons/code-arrows-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/code-arrows-icon.d.ts"
-    },
-    "./icons/payment-icon": {
-      "import": "./target/icons/payment-icon.es.js",
-      "require": "./target/icons/payment-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/payment-icon.d.ts"
+    "./icons/volume-high-icon": {
+      "import": "./target/icons/volume-high-icon.es.js",
+      "require": "./target/icons/volume-high-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/volume-high-icon.d.ts"
     },
     "./icons/pencil-edit-icon": {
       "import": "./target/icons/pencil-edit-icon.es.js",
       "require": "./target/icons/pencil-edit-icon.cjs.js",
       "types": "./target/types/src/ui-lib/icons/pencil-edit-icon.d.ts"
     },
-    "./icons/smartphone-icon": {
-      "import": "./target/icons/smartphone-icon.es.js",
-      "require": "./target/icons/smartphone-icon.cjs.js",
-      "types": "./target/types/src/ui-lib/icons/smartphone-icon.d.ts"
+    "./icons/search-circle-icon": {
+      "import": "./target/icons/search-circle-icon.es.js",
+      "require": "./target/icons/search-circle-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/search-circle-icon.d.ts"
     },
-    "./hooks/use-data-table": {
-      "import": "./target/hooks/use-data-table.es.js",
-      "require": "./target/hooks/use-data-table.cjs.js",
-      "types": "./target/types/src/ui-lib/hooks/use-data-table.d.ts"
+    "./icons/euro-sign-icon": {
+      "import": "./target/icons/euro-sign-icon.es.js",
+      "require": "./target/icons/euro-sign-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/euro-sign-icon.d.ts"
     },
-    "./hooks/use-toast": {
-      "import": "./target/hooks/use-toast.es.js",
-      "require": "./target/hooks/use-toast.cjs.js",
-      "types": "./target/types/src/ui-lib/hooks/use-toast.d.ts"
+    "./icons/logout-icon": {
+      "import": "./target/icons/logout-icon.es.js",
+      "require": "./target/icons/logout-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/logout-icon.d.ts"
     },
-    "./hooks/use-mobile": {
-      "import": "./target/hooks/use-mobile.es.js",
-      "require": "./target/hooks/use-mobile.cjs.js",
-      "types": "./target/types/src/ui-lib/hooks/use-mobile.d.ts"
+    "./icons/close-icon": {
+      "import": "./target/icons/close-icon.es.js",
+      "require": "./target/icons/close-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/close-icon.d.ts"
     },
-    "./hooks/use-server": {
-      "import": "./target/hooks/use-server.es.js",
-      "require": "./target/hooks/use-server.cjs.js",
-      "types": "./target/types/src/ui-lib/hooks/use-server.d.ts"
+    "./icons/layout-icon": {
+      "import": "./target/icons/layout-icon.es.js",
+      "require": "./target/icons/layout-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/layout-icon.d.ts"
+    },
+    "./icons/nano-technology-icon": {
+      "import": "./target/icons/nano-technology-icon.es.js",
+      "require": "./target/icons/nano-technology-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/nano-technology-icon.d.ts"
+    },
+    "./icons/x-icon": {
+      "import": "./target/icons/x-icon.es.js",
+      "require": "./target/icons/x-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/x-icon.d.ts"
+    },
+    "./icons/user-icon": {
+      "import": "./target/icons/user-icon.es.js",
+      "require": "./target/icons/user-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/user-icon.d.ts"
+    },
+    "./icons/laurel-wreath-first-icon": {
+      "import": "./target/icons/laurel-wreath-first-icon.es.js",
+      "require": "./target/icons/laurel-wreath-first-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/laurel-wreath-first-icon.d.ts"
+    },
+    "./icons/circle-more-horizontal-icon": {
+      "import": "./target/icons/circle-more-horizontal-icon.es.js",
+      "require": "./target/icons/circle-more-horizontal-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/circle-more-horizontal-icon.d.ts"
+    },
+    "./icons/play-icon": {
+      "import": "./target/icons/play-icon.es.js",
+      "require": "./target/icons/play-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/play-icon.d.ts"
+    },
+    "./icons/instagram-icon": {
+      "import": "./target/icons/instagram-icon.es.js",
+      "require": "./target/icons/instagram-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/instagram-icon.d.ts"
+    },
+    "./icons/trending-up-icon": {
+      "import": "./target/icons/trending-up-icon.es.js",
+      "require": "./target/icons/trending-up-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/trending-up-icon.d.ts"
+    },
+    "./icons/contracts-icon": {
+      "import": "./target/icons/contracts-icon.es.js",
+      "require": "./target/icons/contracts-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/contracts-icon.d.ts"
+    },
+    "./icons/saturn-icon": {
+      "import": "./target/icons/saturn-icon.es.js",
+      "require": "./target/icons/saturn-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/saturn-icon.d.ts"
+    },
+    "./icons/bell-icon": {
+      "import": "./target/icons/bell-icon.es.js",
+      "require": "./target/icons/bell-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/bell-icon.d.ts"
+    },
+    "./icons/unfold-more-icon": {
+      "import": "./target/icons/unfold-more-icon.es.js",
+      "require": "./target/icons/unfold-more-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/unfold-more-icon.d.ts"
+    },
+    "./icons/settings-cog-icon": {
+      "import": "./target/icons/settings-cog-icon.es.js",
+      "require": "./target/icons/settings-cog-icon.cjs.js",
+      "types": "./target/types/src/ui-lib/icons/settings-cog-icon.d.ts"
     },
     "./hooks/use-resize-observer": {
       "import": "./target/hooks/use-resize-observer.es.js",
@@ -1247,6 +1227,16 @@
       "require": "./target/hooks/use-active-id.cjs.js",
       "types": "./target/types/src/ui-lib/hooks/use-active-id.d.ts"
     },
+    "./hooks/use-latest": {
+      "import": "./target/hooks/use-latest.es.js",
+      "require": "./target/hooks/use-latest.cjs.js",
+      "types": "./target/types/src/ui-lib/hooks/use-latest.d.ts"
+    },
+    "./hooks/use-data-table": {
+      "import": "./target/hooks/use-data-table.es.js",
+      "require": "./target/hooks/use-data-table.cjs.js",
+      "types": "./target/types/src/ui-lib/hooks/use-data-table.d.ts"
+    },
     "./hooks/use-overflown": {
       "import": "./target/hooks/use-overflown.es.js",
       "require": "./target/hooks/use-overflown.cjs.js",
@@ -1256,6 +1246,16 @@
       "import": "./target/hooks/use-text-width.es.js",
       "require": "./target/hooks/use-text-width.cjs.js",
       "types": "./target/types/src/ui-lib/hooks/use-text-width.d.ts"
+    },
+    "./hooks/use-mobile": {
+      "import": "./target/hooks/use-mobile.es.js",
+      "require": "./target/hooks/use-mobile.cjs.js",
+      "types": "./target/types/src/ui-lib/hooks/use-mobile.d.ts"
+    },
+    "./hooks/use-toast": {
+      "import": "./target/hooks/use-toast.es.js",
+      "require": "./target/hooks/use-toast.cjs.js",
+      "types": "./target/types/src/ui-lib/hooks/use-toast.d.ts"
     },
     "./hooks/use-theme": {
       "import": "./target/hooks/use-theme.es.js",
@@ -1267,50 +1267,25 @@
       "require": "./target/hooks/use-clipboard.cjs.js",
       "types": "./target/types/src/ui-lib/hooks/use-clipboard.d.ts"
     },
-    "./hooks/use-latest": {
-      "import": "./target/hooks/use-latest.es.js",
-      "require": "./target/hooks/use-latest.cjs.js",
-      "types": "./target/types/src/ui-lib/hooks/use-latest.d.ts"
-    },
-    "./utils/round": {
-      "import": "./target/utils/round.es.js",
-      "require": "./target/utils/round.cjs.js",
-      "types": "./target/types/src/ui-lib/utils/round.d.ts"
-    },
-    "./utils/create-id": {
-      "import": "./target/utils/create-id.es.js",
-      "require": "./target/utils/create-id.cjs.js",
-      "types": "./target/types/src/ui-lib/utils/create-id.d.ts"
-    },
-    "./utils/toast": {
-      "import": "./target/utils/toast.es.js",
-      "require": "./target/utils/toast.cjs.js",
-      "types": "./target/types/src/ui-lib/utils/toast.d.ts"
-    },
-    "./utils/hsl": {
-      "import": "./target/utils/hsl.es.js",
-      "require": "./target/utils/hsl.cjs.js",
-      "types": "./target/types/src/ui-lib/utils/hsl.d.ts"
-    },
-    "./utils/format": {
-      "import": "./target/utils/format.es.js",
-      "require": "./target/utils/format.cjs.js",
-      "types": "./target/types/src/ui-lib/utils/format.d.ts"
-    },
-    "./utils/create-icon-component": {
-      "import": "./target/utils/create-icon-component.es.js",
-      "require": "./target/utils/create-icon-component.cjs.js",
-      "types": "./target/types/src/ui-lib/utils/create-icon-component.d.ts"
+    "./hooks/use-server": {
+      "import": "./target/hooks/use-server.es.js",
+      "require": "./target/hooks/use-server.cjs.js",
+      "types": "./target/types/src/ui-lib/hooks/use-server.d.ts"
     },
     "./utils/classnames": {
       "import": "./target/utils/classnames.es.js",
       "require": "./target/utils/classnames.cjs.js",
       "types": "./target/types/src/ui-lib/utils/classnames.d.ts"
     },
-    "./utils/offscreen-canvas": {
-      "import": "./target/utils/offscreen-canvas.es.js",
-      "require": "./target/utils/offscreen-canvas.cjs.js",
-      "types": "./target/types/src/ui-lib/utils/offscreen-canvas.d.ts"
+    "./utils/format": {
+      "import": "./target/utils/format.es.js",
+      "require": "./target/utils/format.cjs.js",
+      "types": "./target/types/src/ui-lib/utils/format.d.ts"
+    },
+    "./utils/toast": {
+      "import": "./target/utils/toast.es.js",
+      "require": "./target/utils/toast.cjs.js",
+      "types": "./target/types/src/ui-lib/utils/toast.d.ts"
     },
     "./utils/is-server": {
       "import": "./target/utils/is-server.es.js",
@@ -1322,15 +1297,40 @@
       "require": "./target/utils/resize-observer-store.cjs.js",
       "types": "./target/types/src/ui-lib/utils/resize-observer-store.d.ts"
     },
-    "./utils/catch-error": {
-      "import": "./target/utils/catch-error.es.js",
-      "require": "./target/utils/catch-error.cjs.js",
-      "types": "./target/types/src/ui-lib/utils/catch-error.d.ts"
+    "./utils/hsl": {
+      "import": "./target/utils/hsl.es.js",
+      "require": "./target/utils/hsl.cjs.js",
+      "types": "./target/types/src/ui-lib/utils/hsl.d.ts"
     },
     "./utils/debounce": {
       "import": "./target/utils/debounce.es.js",
       "require": "./target/utils/debounce.cjs.js",
       "types": "./target/types/src/ui-lib/utils/debounce.d.ts"
+    },
+    "./utils/offscreen-canvas": {
+      "import": "./target/utils/offscreen-canvas.es.js",
+      "require": "./target/utils/offscreen-canvas.cjs.js",
+      "types": "./target/types/src/ui-lib/utils/offscreen-canvas.d.ts"
+    },
+    "./utils/catch-error": {
+      "import": "./target/utils/catch-error.es.js",
+      "require": "./target/utils/catch-error.cjs.js",
+      "types": "./target/types/src/ui-lib/utils/catch-error.d.ts"
+    },
+    "./utils/create-id": {
+      "import": "./target/utils/create-id.es.js",
+      "require": "./target/utils/create-id.cjs.js",
+      "types": "./target/types/src/ui-lib/utils/create-id.d.ts"
+    },
+    "./utils/round": {
+      "import": "./target/utils/round.es.js",
+      "require": "./target/utils/round.cjs.js",
+      "types": "./target/types/src/ui-lib/utils/round.d.ts"
+    },
+    "./utils/create-icon-component": {
+      "import": "./target/utils/create-icon-component.es.js",
+      "require": "./target/utils/create-icon-component.cjs.js",
+      "types": "./target/types/src/ui-lib/utils/create-icon-component.d.ts"
     },
     "./utils/backlight-color": {
       "import": "./target/utils/backlight-color.es.js",
