@@ -1,0 +1,20 @@
+---
+import { ComponentPreview as Preview } from "@/components/component-preview";
+import { COMPONENT_PREVIEWS } from "@/constants/component-previews";
+import { readFile } from "@/utils/file-system";
+
+type ComponentPreviewProps = {
+  id: keyof typeof COMPONENT_PREVIEWS;
+};
+
+const { id } = Astro.props as ComponentPreviewProps;
+
+if (!id || !COMPONENT_PREVIEWS[id]) {
+  throw new Error(`Component preview with id "${id}" not found`);
+}
+
+const { path } = COMPONENT_PREVIEWS[id];
+const code = await readFile(path);
+---
+
+<Preview code={code} id={id} client:visible />

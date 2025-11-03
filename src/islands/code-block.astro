@@ -1,0 +1,19 @@
+---
+import highlight from "highlight.js/lib/common";
+
+import { CodeBlockWrapper } from "@/components/code-block";
+import { CopyToClipboardButton } from "@/components/copy-to-clipboard-button";
+
+const slotContent = await Astro.slots.render("default");
+
+const code = atob(slotContent.match(/data-raw-base-64="([^"]+)"/)?.[1] ?? "");
+const lang = slotContent.match(/data-language="([^"]+)"/)?.[1] ?? "plaintext";
+
+const highlightedCode = highlight.highlight(code, { language: lang }).value;
+---
+
+<CodeBlockWrapper className="mt-4" client:visible>
+  <pre
+    class="p-4"><code class="text-sm leading-6 text-foreground/70" set:html={highlightedCode} /></pre>
+  <CopyToClipboardButton value={code} client:visible />
+</CodeBlockWrapper>

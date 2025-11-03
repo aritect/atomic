@@ -1,0 +1,67 @@
+import React from "react";
+
+import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
+
+import { cn } from "@/utils-ui-lib/classnames";
+
+const ScrollBar = React.forwardRef<
+  React.ElementRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>,
+  React.ComponentPropsWithoutRef<
+    typeof ScrollAreaPrimitive.ScrollAreaScrollbar
+  > & { showScrollbar?: boolean }
+>((
+  { className, orientation = "vertical", showScrollbar = true, ...props },
+  ref,
+) => (
+    <ScrollAreaPrimitive.ScrollAreaScrollbar
+      ref={ref}
+      orientation={orientation}
+      className={cn(
+        "flex touch-none select-none transition-colors z-10",
+        orientation === "vertical"
+          && "h-full w-2.5 border-l border-l-transparent p-px",
+        orientation === "horizontal"
+          && "h-2.5 flex-col border-t border-t-transparent p-px",
+        className,
+      )}
+      {...props}
+    >
+      <ScrollAreaPrimitive.ScrollAreaThumb
+        className={cn(
+          "relative flex-1 rounded-full",
+          showScrollbar && "bg-border",
+        )}
+      />
+    </ScrollAreaPrimitive.ScrollAreaScrollbar>
+),);
+
+ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName;
+
+const ScrollArea = React.forwardRef<
+  React.ElementRef<typeof ScrollAreaPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root> & {
+    showScrollbar?: boolean;
+    viewPortClassName?: string;
+    viewPortRef?: React.RefObject<HTMLDivElement>;
+    orientation?: ScrollAreaPrimitive.ScrollAreaScrollbarProps["orientation"],
+  }
+>(({ className, children, showScrollbar = true, orientation, viewPortClassName, viewPortRef, ...props }, ref) => (
+  <ScrollAreaPrimitive.Root
+    ref={ref}
+    className={cn("relative overflow-hidden", className)}
+    {...props}
+  >
+    <ScrollAreaPrimitive.Viewport
+      className={cn("size-full rounded-[inherit]", viewPortClassName)}
+      ref={viewPortRef}
+    >
+      {children}
+    </ScrollAreaPrimitive.Viewport>
+    <ScrollBar orientation={orientation} showScrollbar={showScrollbar} />
+    <ScrollAreaPrimitive.Corner />
+  </ScrollAreaPrimitive.Root>
+));
+
+ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName;
+
+export { ScrollArea, ScrollBar };

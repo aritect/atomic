@@ -1,0 +1,85 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declarationMap": true,
+    "declaration": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ],
+    "jsx": "react",
+    "strict": true,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "verbatimModuleSyntax": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "declarationDir": "target/types",
+    "outDir": "target",
+    "paths": {
+      "@/internal/*": [
+        "./internal/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@/assets/*": [
+        "./src/assets/*"
+      ],
+      "@/constants/*": [
+        "./src/constants/*"
+      ],
+      "@/islands/*": [
+        "./src/islands/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/types-ui-lib": [
+        "./src/ui-lib/types"
+      ],
+      "@/icons-ui-lib/*": [
+        "./src/ui-lib/icons/*"
+      ],
+      "@/hooks-ui-lib/*": [
+        "./src/ui-lib/hooks/*"
+      ],
+      "@/utils-ui-lib/*": [
+        "./src/ui-lib/utils/*"
+      ],
+      "@/assets-ui-lib/*": [
+        "./src/ui-lib/assets/*"
+      ],
+      "@/components-ui-lib/*": [
+        "./src/ui-lib/components/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "target"
+  ],
+  "include": [
+    "**/*.astro",
+    "**/*.tsx",
+    "**/*.ts"
+  ]
+}

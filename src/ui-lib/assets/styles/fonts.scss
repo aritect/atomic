@@ -1,0 +1,28 @@
+@use "variables";
+
+$font-weights-inter: (
+  "Black" 900,
+  "ExtraBold" 800,
+  "Bold" 700,
+  "SemiBold" 600,
+  "Medium" 500,
+  "Regular" 400,
+  "Light" 300,
+  "ExtraLight" 200,
+  "Thin" 100,
+);
+
+@each $weight, $value in $font-weights-inter {
+  @font-face {
+    font-family: Inter;
+    font-weight: #{$value};
+    src: url("../fonts/inter/Inter-#{$weight}.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: Inter;
+    font-style: italic;
+    font-weight: #{$value};
+    src: url("../fonts/inter/Inter-#{$weight}Italic.woff2") format("woff2");
+  }
+}

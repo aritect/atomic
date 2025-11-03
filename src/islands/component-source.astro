@@ -1,0 +1,20 @@
+---
+import { ComponentSource as Source } from "@/components/component-source";
+import { COMPONENT_SOURCES } from "@/constants/component-sources";
+import { readFile } from "@/utils/file-system";
+
+type ComponentSourceProps = {
+  id: keyof typeof COMPONENT_SOURCES;
+};
+
+const { id } = Astro.props as ComponentSourceProps;
+
+if (!id || !COMPONENT_SOURCES[id]) {
+  throw new Error(`Component source not found for id: ${id}`);
+}
+
+const path = COMPONENT_SOURCES[id];
+const code = await readFile(path);
+---
+
+<Source code={code} client:visible />

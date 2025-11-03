@@ -1,0 +1,75 @@
+---
+import {
+  type CollectionEntry,
+  getCollection,
+  render,
+  getEntry,
+} from "astro:content";
+
+import { META } from "@/constants/meta";
+import DocsLayout from "@/islands/docs-layout.astro";
+import {
+  extractSectionIds,
+  transformCollectionGroupsToMenuItems,
+  transformCollectionsToGroups,
+} from "@/utils/docs";
+import { components } from "@/utils/mdx-components";
+
+export const getStaticPaths = async () => {
+  const collection = await getCollection("docs");
+  const collectionGroups = transformCollectionsToGroups(collection);
+  const collectionGroupsMenuItems =
+    transformCollectionGroupsToMenuItems(collectionGroups);
+
+  return Object.values(collectionGroups).reduce<Array<CollectionEntry<"docs">>>(
+    (previousValue, documents) => {
+      const items = documents.map(
+        (document: CollectionEntry<"docs">, index: number, sourceDocuments) => {
+          const sectionIds = extractSectionIds(document.body!);
+
+          return {
+            ...document,
+            params: { id: document.id },
+            props: {
+              id: document.id,
+              render: document.rendered,
+              data: {
+                description: document.data.description,
+                title: `${document.data.title} - ${META.title}`,
+                canonical: `${META.canonical}/docs/${document.id}`,
+                nextPage: sourceDocuments[index + 1]
+                  ? {
+                      title: sourceDocuments[index + 1].data.title,
+                      href: `/docs/${sourceDocuments[index + 1].id}`,
+                    }
+                  : null,
+                prevPage: sourceDocuments[index - 1]
+                  ? {
+                      title: sourceDocuments[index - 1].data.title,
+                      href: `/docs/${sourceDocuments[index - 1].id}`,
+                    }
+                  : null,
+                toc: sectionIds,
+                menu: collectionGroupsMenuItems,
+              },
+            },
+          };
+        }
+      );
+
+      return [...previousValue, ...items];
+    },
+    []
+  );
+};
+
+const { data, id } = Astro.props;
+const document = await (getEntry("docs", id) as Promise<
+  CollectionEntry<"docs">
+>);
+const { Content } = await render(document);
+---
+
+<DocsLayout meta={data} pathname={`/docs/${id}`}>
+  <Content components={components} />
+</DocsLayout>

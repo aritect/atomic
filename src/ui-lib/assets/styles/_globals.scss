@@ -1,0 +1,94 @@
+@use "sass:map";
+
+@use "variables";
+@use "functions";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    --font-family-sans: #{variables.$font-family-sans};
+    --font-family-mono: #{variables.$font-family-mono};
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+
+    --radius: #{variables.$radius};
+    --transition-duration: #{variables.$transition-duration};
+
+    @each $key, $fs, $lh in variables.$font-sizes {
+      --font-size-#{$key}: #{$fs};
+      --font-size-lh-#{$key}: #{$lh};
+    }
+
+    @each $key, $value in variables.$common-color-palette {
+      --#{$key}: #{functions.hslToList($value)};
+    }
+
+    @each $key, $value in variables.$light-color-palette {
+      --#{$key}: #{functions.hslToList($value)};
+    }
+  }
+
+  .dark {
+    color-scheme: dark;
+
+    @each $key, $value in variables.$dark-color-palette {
+      --#{$key}: #{functions.hslToList($value)};
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .button-with-gradient {
+    @apply py-0 px-0 bg-border border-none relative transition-[background] duration-global ease-in-out !important;
+
+    & .button-with-gradient-border {
+      background: radial-gradient(200px circle at var(--mouse-x) var(--mouse-y), hsl(var(--primary) / 0.15), transparent 40%);
+      @apply content-[''] absolute top-0 left-0 opacity-0 transition-opacity duration-global ease-in-out;
+      @apply w-full h-full rounded-[inherit];
+      @apply z-[1];
+    }
+
+    & .button-with-gradient-body {
+      @apply z-[3] m-[1px] flex items-center justify-center w-full cursor-default relative rounded-[inherit] h-[calc(100%_-_2px)] text-foreground bg-background;
+    }
+
+    &:hover {
+      &::before,
+      .button-with-gradient-border {
+        @apply opacity-100;
+      }
+    }
+  }
+
+  .funny-button-wrapper {
+    --border-radius: calc(var(--radius) - 8px);
+    --border-inner-radius: calc(var(--border-radius) - 1px);
+
+    @apply relative inline-flex shrink-0 items-center justify-center outline-none
+    overflow-hidden p-[1px] rounded-[var(--border-radius)] shadow-sm bg-gradient-to-t
+    from-foreground/15 to-foreground/20 dark:from-foreground/10 dark:to-foreground/20 text-foreground
+    transition-colors duration-global ease-in-out hover:bg-foreground/20 dark:hover:bg-foreground/15
+    focus-visible:bg-foreground/20 dark:focus-visible:bg-foreground/15 focus-visible:outline-none
+    disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .funny-button {
+    @apply relative inline-flex shrink-0 items-center justify-center
+    bg-muted font-medium text-sm rounded-[var(--border-inner-radius)] text-foreground;
+  }
+}

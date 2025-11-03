@@ -1,0 +1,194 @@
+@use "sass:map";
+@use "sass:color";
+@use "functions";
+
+$font-family-sans: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-mono: ui-monospace, sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
+
+$font-sizes: (
+  "xs" 0.75rem 1rem,
+  "sm" 0.875rem 1.25rem,
+  "base" 1rem 1.5rem,
+  "lg" 1.125rem 1.75rem,
+  "xl" 1.25rem 1.75rem,
+  "2xl" 1.5rem 2rem,
+  "3xl" 1.875rem 2.25rem,
+  "4xl" 2.25rem 2.5rem,
+  "5xl" 3rem 3rem,
+  "5xl-a" 3.5rem 3.5rem,
+  "6xl" 3.75rem 3.75rem,
+  "7xl" 4.5rem 4.5rem,
+  "8xl" 6rem 6rem,
+  "9xl" 8rem 8rem,
+);
+
+$transition-duration: 200ms;
+$radius: 1rem;
+
+$common-color-palette: (
+  gradient-main-light-start: hsl(240, 7%, 98%),
+  gradient-main-dark-start: hsl(240, 7%, 11%),
+  gradient-main-light-end: hsl(240, 7%, 66%),
+  gradient-main-dark-end: hsl(240, 7%, 33%),
+  bright-pink: hsl(342, 100%, 47%),
+  electric-blue: hsl(184, 96%, 53%),
+  dark-yellow: hsl(63, 97%, 57%),
+  electric-mint: hsl(166, 100%, 53%),
+  eerie-black: hsl(240, 7%, 11%),
+);
+
+$dark-color-palette: (
+  background: hsl(240, 7%, 11%),
+  foreground: hsl(240, 4%, 98%),
+  muted: hsl(240, 4%, 17%),
+  muted-foreground: hsl(240, 4%, 66%),
+  popover: hsl(240, 7%, 11%),
+  popover-foreground: hsl(240, 4%, 98%),
+  alert: hsl(240, 4%, 17%),
+  alert-foreground: hsl(240, 4%, 66%),
+  card: hsl(240, 7%, 11%),
+  card-foreground: hsl(240, 4%, 98%),
+  border: hsl(240, 4%, 17%),
+  input: hsl(240, 4%, 17%),
+  primary: hsl(240, 4%, 98%),
+  primary-foreground: hsl(240, 2%, 17%),
+  secondary: hsl(240, 4%, 17%),
+  secondary-foreground: hsl(240, 4%, 98%),
+  accent: hsl(240, 4%, 17%),
+  accent-foreground: hsl(240, 4%, 98%),
+  ring: hsl(240, 5%, 64.9%),
+
+  chart-neutral-base: hsl(240, 4%, 98%),
+  chart-destructive-base: hsl(240, 4%, 98%),
+
+  destructive: hsl(342, 100%, 74%),
+  destructive-highlight: hsl(332, 34%, 14%),
+  destructive-highlight-foreground: hsl(342, 100%, 47%),
+  destructive-flashlight: hsl(342, 100%, 47%),
+  destructive-foreground: hsl(240, 7%, 11%),
+  destructive-ring: hsl(342, 100%, 47%),
+
+  positive: hsl(145, 77%, 80%),
+  positive-highlight: hsl(157, 24%, 15%),
+  positive-highlight-foreground: hsl(145, 77%, 53%),
+  positive-flashlight: hsl(145, 77%, 53%),
+  positive-foreground: hsl(240, 7%, 11%),
+  positive-ring: hsl(145, 77%, 53%),
+
+  neutral: hsl(187, 100%, 77%),
+  neutral-highlight: hsl(191, 35%, 15%),
+  neutral-highlight-foreground: hsl(187, 100%, 50%),
+  neutral-flashlight: hsl(187, 100%, 50%),
+  neutral-foreground: hsl(240, 7%, 11%),
+  neutral-ring: hsl(184, 100%, 50%),
+
+  warning: hsl(43, 68%, 70%),
+  warning-highlight: hsl(40, 17%, 14%),
+  warning-highlight-foreground: hsl(43, 68%, 43%),
+  warning-flashlight: hsl(43, 68%, 43%),
+  warning-foreground: hsl(240, 7%, 11%),
+  warning-ring: hsl(43, 68%, 43%),
+
+  money-value-b: hsl(342, 100%, 74%),
+  money-value-m: hsl(187, 100%, 77%),
+  money-value-k: hsl(145, 77%, 80%),
+
+  sidebar-background: hsl(240, 7%, 11%),
+  sidebar-foreground: hsl(240, 4%, 98%),
+  sidebar-primary: hsl(240, 4%, 98%),
+  sidebar-primary-foreground: hsl(240, 2%, 17%),
+  sidebar-accent: hsl(240, 4%, 17%),
+  sidebar-accent-foreground: hsl(240, 4%, 98%),
+  sidebar-border: hsl(240, 4%, 17%),
+  sidebar-ring: hsl(240, 5%, 64.9%),
+
+  toast-background: hsl(240, 7%, 24%),
+  toast-border: hsl(240, 7%, 26%),
+  toast-foreground: hsl(240, 4%, 98%),
+  toast-muted-foreground: hsl(240, 4%, 66%),
+  toast-action-button-background: hsl(240, 2%, 80%),
+  toast-action-button-foreground: hsl(240, 4%, 11%),
+  toast-cancel-button-background: hsl(240, 2%, 80%),
+  toast-cancel-button-foreground: hsl(240, 4%, 11%),
+
+  tooltip-background: hsl(240, 7%, 24%),
+  tooltip-foreground: hsl(240, 4%, 98%),
+);
+
+$light-color-palette: (
+  background: hsl(0, 0%, 100%),
+  foreground: hsl(240, 7%, 11%),
+  muted: hsl(240, 6%, 96%),
+  muted-foreground: hsl(240, 6%, 46.1%),
+  popover: hsl(0, 0%, 100%),
+  popover-foreground: hsl(240, 7%, 11%),
+  alert: hsl(240, 6%, 96%),
+  alert-foreground: hsl(240, 6%, 46.1%),
+  card: hsl(0, 0%, 100%),
+  card-foreground: hsl(240, 7%, 11%),
+  border: hsl(240, 2%, 89%),
+  input: hsl(240, 2%, 89%),
+  primary: hsl(240, 2%, 17%),
+  primary-foreground: hsl(240, 4%, 98%),
+  secondary: hsl(240, 6%, 96%),
+  secondary-foreground: hsl(240, 2%, 17%),
+  accent: hsl(240, 6%, 96%),
+  accent-foreground: hsl(240, 2%, 17%),
+  ring: hsl(240, 5%, 64.9%),
+
+  chart-neutral-base: hsl(240, 7%, 11%),
+  chart-destructive-base: hsl(240, 7%, 11%),
+
+  destructive: hsl(342, 100%, 33%),
+  destructive-flashlight: hsl(342, 100%, 47%),
+  destructive-highlight: hsl(342, 100%, 94%),
+  destructive-highlight-foreground: hsl(342, 100%, 33%),
+  destructive-foreground: hsl(0, 0%, 100%),
+  destructive-ring: hsl(342, 100%, 47%),
+
+  positive: hsl(145, 77%, 39%),
+  positive-flashlight: hsl(145, 77%, 53%),
+  positive-highlight: hsl(145, 77%, 94%),
+  positive-highlight-foreground: hsl(145, 77%, 39%),
+  positive-foreground: hsl(0, 0%, 100%),
+  positive-ring: hsl(145, 77%, 53%),
+
+  neutral: hsl(187, 100%, 36%),
+  neutral-flashlight: hsl(187, 100%, 50%),
+  neutral-highlight: hsl(187, 100%, 94%),
+  neutral-highlight-foreground: hsl(187, 100%, 36%),
+  neutral-foreground: hsl(0, 0%, 100%),
+  neutral-ring: hsl(187, 100%, 50%),
+
+  warning: hsl(43, 68%, 29%),
+  warning-flashlight: hsl(43, 68%, 43%),
+  warning-highlight: hsl(43, 68%, 90%),
+  warning-highlight-foreground: hsl(43, 68%, 29%),
+  warning-foreground: hsl(0, 0%, 100%),
+  warning-ring: hsl(43, 68%, 43%),
+
+  money-value-b: hsl(342, 100%, 33%),
+  money-value-m: hsl(187, 100%, 36%),
+  money-value-k: hsl(145, 77%, 39%),
+
+  sidebar-background: hsl(0, 0%, 100%),
+  sidebar-foreground: hsl(240, 7%, 11%),
+  sidebar-primary: hsl(240, 2%, 17%),
+  sidebar-primary-foreground: hsl(240, 4%, 98%),
+  sidebar-accent: hsl(240, 6%, 96%),
+  sidebar-accent-foreground: hsl(240, 2%, 17%),
+  sidebar-border: hsl(240, 2%, 89%),
+  sidebar-ring: hsl(240, 5%, 64.9%),
+
+  toast-background: hsl(240, 7%, 36%),
+  toast-border: hsl(240, 7%, 39%),
+  toast-foreground: hsl(240, 4%, 98%),
+  toast-muted-foreground: hsl(240, 4%, 66%),
+  toast-action-button-background: hsl(240, 2%, 80%),
+  toast-action-button-foreground: hsl(240, 4%, 11%),
+  toast-cancel-button-background: hsl(240, 2%, 80%),
+  toast-cancel-button-foreground: hsl(240, 4%, 11%),
+
+  tooltip-background: hsl(240, 7%, 36%),
+  tooltip-foreground: hsl(240, 4%, 98%),
+);

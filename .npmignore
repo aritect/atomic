@@ -1,0 +1,29 @@
+# source files
+src/
+internal/
+public/
+
+# config files
+.astro/
+.github/
+.vscode/
+astro.config.mjs
+tsconfig.json
+vite.config.ts
+.releaserc
+.editorconfig
+.gitignore
+
+# documentation
+*.md
+!README.md
+
+# development
+node_modules/
+.DS_Store
+*.log
+.env
+.env.*
+
+# build artifacts
+target/

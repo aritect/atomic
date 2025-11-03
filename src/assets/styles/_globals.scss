@@ -1,0 +1,48 @@
+@use "sass:meta";
+
+@tailwind base;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground;
+  }
+
+  pre > code span {
+    @apply font-mono;
+  }
+}
+
+@layer utilities {
+  .container-docs {
+    @apply px-5 relative w-full 2xl:mx-[calc((100vw-1352px)/2)] 2xl:max-w-[1352px];
+  }
+
+  .step {
+    counter-increment: step;
+  }
+
+  .step::before {
+    @apply absolute -mt-1 ml-[-50px] inline-flex size-9 items-center justify-center rounded-full border-4 border-background bg-muted text-base text-muted-foreground;
+    content: counter(step);
+  }
+
+  .h3-next-p + p {
+    @apply mt-3;
+  }
+}
+
+html[data-theme="light"] {
+  @include meta.load-css("@/assets/styles/highlight-palettes/light.css");
+}
+html[data-theme="dark"] {
+  @include meta.load-css("@/assets/styles/highlight-palettes/dark.css");
+}

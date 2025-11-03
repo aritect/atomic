@@ -1,0 +1,99 @@
+---
+import "@/assets-ui-lib/styles/main.scss";
+import "@/assets-ui-lib/styles/fonts.scss";
+import "@/assets/styles/main.scss";
+
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { Menu } from "@/components/menu";
+import { Toc } from "@/components/toc";
+import { Toaster } from "@/components-ui-lib/toaster";
+
+const { pathname, meta } = Astro.props;
+
+const { primitivesMenuItems, compositesMenuItems, chartsMenuItems } = meta.menu;
+---
+
+<script is:inline>
+  const getThemePreference = () => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+
+  const isDark = getThemePreference() === "dark";
+  document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+  document.documentElement.setAttribute(
+    "data-theme",
+    isDark ? "dark" : "light"
+  );
+
+  if (typeof localStorage !== "undefined") {
+    const observer = new MutationObserver(() => {
+      const isDark = document.documentElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
+</script>
+
+<html>
+  <head>
+    <title>{meta.title}</title>
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content={meta.author} />
+    <meta name="description" content={meta.description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/atomic.webmanifest" />
+    <link rel="canonical" href={meta.canonical} />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <Header
+      client:visible
+      pathname={pathname}
+      chartsMenuItems={chartsMenuItems}
+      primitivesMenuItems={primitivesMenuItems}
+      compositesMenuItems={compositesMenuItems}
+    />
+    <main>
+      <div class="container-docs">
+        <Menu
+          client:visible
+          pathname={pathname}
+          chartsMenuItems={chartsMenuItems}
+          primitivesMenuItems={primitivesMenuItems}
+          compositesMenuItems={compositesMenuItems}
+        />
+        <div class="flex gap-x-16 pt-6 md:ml-[304px]">
+          <div class="md:mb-18 mb-9 grow overflow-hidden xl:mb-32">
+            <slot />
+            <Footer
+              client:visible
+              previousLabel={meta.prevPage?.title}
+              previousHref={meta.prevPage?.href}
+              nextLabel={meta.nextPage?.title}
+              nextHref={meta.nextPage?.href}
+            />
+          </div>
+          <Toc toc={meta.toc} client:visible />
+        </div>
+      </div>
+    </main>
+    <Toaster position="top-center" client:only="react" />
+  </body>
+</html>

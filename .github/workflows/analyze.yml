@@ -1,0 +1,13 @@
+name: Analyze
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  analyze:
+    uses: ./.github/workflows/reusable-analyze-bun.yml
+    secrets:
+      NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+      NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
