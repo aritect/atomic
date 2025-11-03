@@ -1349,7 +1349,7 @@
     "test": "bun test",
     "clean": "rimraf target",
     "release": "semantic-release",
-    "version": "bun ./internal/scripts/up-version.mjs",
+    "update-version": "bun ./internal/scripts/up-version.mjs",
     "generate:exports": "bun ./internal/scripts/generate-exports.mjs",
     "build": "bun run clean && bun run generate:exports && vite build --config internal/vite/vite-config.ts",
     "build:app": "astro check && astro build",

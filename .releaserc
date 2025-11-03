@@ -49,14 +49,15 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "bun run version ${nextRelease.version} && bun run build"
+        "prepareCmd": "bun run update-version ${nextRelease.version} && bun run build"
       }
     ],
     [
       "@semantic-release/npm",
       {
         "npmPublish": true,
-        "tarballDir": "target"
+        "tarballDir": "target",
+        "pkgRoot": "."
       }
     ],
     [
