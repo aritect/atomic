@@ -1,6 +1,6 @@
 import { createIconComponent } from "@/utils-ui-lib/create-icon-component";
-import { BeachIcon as BeachIconH } from '@hugeicons/core-free-icons';
+import { Sun01Icon } from '@hugeicons/core-free-icons';
 
-export const BeachIcon = createIconComponent("BeachIcon", {
-  "stroke.rounded": BeachIconH,
+export const BeachIcon = createIconComponent("Sun01Icon", {
+  "stroke.rounded": Sun01Icon,
 } as Record<string, any>, "stroke");
