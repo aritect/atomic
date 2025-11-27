@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState, useLayoutEffect, type PropsWithChildren } from "react";
-import gsap from "@alxshelepenok/gsap";
+import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import ScrambleTextPlugin from "@alxshelepenok/gsap/ScrambleTextPlugin";
+import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
 
 import { cn } from "@/utils-ui-lib/classnames";
 
