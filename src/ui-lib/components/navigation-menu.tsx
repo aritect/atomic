@@ -14,7 +14,7 @@ const NavigationMenuViewport = React.forwardRef<
   <div className={cn("absolute left-0 top-full flex justify-center")}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-        "origin-top-center bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border shadow-sm md:w-[var(--radix-navigation-menu-viewport-width)]",
+        "origin-top-center bg-popover text-popover-foreground data-[state=open]:animate-menu-open data-[state=closed]:animate-menu-close data-[state=closed]:zoom-out-90 data-[state=open]:zoom-in-90 relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden border md:w-[var(--radix-navigation-menu-viewport-width)]",
         className,
       )}
       ref={ref}
@@ -62,7 +62,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
-const navigationMenuTriggerStyle = cva("group inline-flex h-10 w-max items-center justify-center rounded-md px-2 py-2 text-sm font-medium transition-colors duration-global text-muted-foreground hover:text-accent-foreground focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",);
+const navigationMenuTriggerStyle = cva("group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-normal transition-colors duration-global text-muted-foreground hover:text-accent-foreground focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50",);
 
 const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
@@ -144,12 +144,12 @@ const NavigationMenuDropdownList = React.forwardRef<
   HTMLUListElement,
   NavigationMenuDropdownListProps
 >(({ className, variant, children }, ref) => (
-    <ul
-      ref={ref}
-      className={cn(navigationMenuDropdownListVariants({ variant, className }))}
-    >
-      {children}
-    </ul>
+  <ul
+    ref={ref}
+    className={cn(navigationMenuDropdownListVariants({ variant, className }))}
+  >
+    {children}
+  </ul>
 ));
 
 NavigationMenuDropdownList.displayName = "NavigationMenuDropdownList";
@@ -196,41 +196,41 @@ const NavigationMenuDropdownItem = React.forwardRef<
   const navigationMenuDropdownItemStyle = cn(navigationMenuDropdownItemVariants({ variant }),);
 
   const listItemContent = variant === "card" ? (
-        <>
-          {cardImage ? (
-            <div className="relative flex-grow overflow-hidden rounded-lg">
-              <Image
-                src={cardImage}
-                alt={cardImageAlt!}
-                className="absolute inset-0 bottom-0 left-0 top-0 h-full w-full bg-cover"
-              />
-            </div>
-          ) : (
-            <div className="flex-grow" />
-          )}
-          <h4 className="mb-1 mt-3 text-base font-medium">{title}</h4>
-          <p className="text-muted-foreground text-sm leading-6">{children}</p>
-        </>
+    <>
+      {cardImage ? (
+        <div className="relative flex-grow overflow-hidden">
+          <Image
+            src={cardImage}
+            alt={cardImageAlt!}
+            className="absolute inset-0 bottom-0 left-0 top-0 h-full w-full bg-cover"
+          />
+        </div>
+      ) : (
+        <div className="flex-grow" />
+      )}
+      <h4 className="mb-1 mt-3 text-base font-medium">{title}</h4>
+      <p className="text-muted-foreground text-sm leading-6">{children}</p>
+    </>
   ) : (
-        <>
-          <p className="text-foreground mb-1 text-sm font-medium">{title}</p>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-6">
-            {children}
-          </p>
-        </>
+    <>
+      <p className="text-foreground mb-1 text-sm font-medium">{title}</p>
+      <p className="text-muted-foreground line-clamp-2 text-sm leading-6">
+        {children}
+      </p>
+    </>
   );
 
   return (
-      <li ref={ref} className={cn(variant === "card" && "row-span-3")}>
-        <NavigationMenuLink
-          href={href}
-          className={navigationMenuDropdownItemStyle}
-        >
-          {listItemContent}
-        </NavigationMenuLink>
-      </li>
+    <li ref={ref} className={cn(variant === "card" && "row-span-3")}>
+      <NavigationMenuLink
+        href={href}
+        className={navigationMenuDropdownItemStyle}
+      >
+        {listItemContent}
+      </NavigationMenuLink>
+    </li>
   );
-},);
+});
 
 NavigationMenuDropdownItem.displayName = "NavigationMenuDropdownItem";
 

@@ -30,13 +30,13 @@ const Toaster = ({ ...props }: ToasterProps) => {
         toastOptions={{
           classNames: {
             toast:
-              "group toast group-[.toaster]:rounded-md group-[.toaster]:border group-[.toaster]:border-toast-border group-[.toaster]:bg-toast-background group-[.toaster]:text-toast-foreground !group-[.toaster]:shadow-sm",
+              "group toast group-[.toaster]:rounded-none group-[.toaster]:border group-[.toaster]:border-toast-border group-[.toaster]:bg-toast-background group-[.toaster]:text-toast-foreground !group-[.toaster]:shadow-sm",
             title: "group-[.toast]:font-normal group-[.toast]:font-sans",
             description: "group-[.toast]:text-toast-muted-foreground group-[.toast]:font-normal group-[.toast]:font-sans",
             actionButton:
-              "!leading-[0] !shadow-none !rounded-sm !bg-toast-action-button-background hover:!bg-toast-foreground !text-toast-action-button-foreground !font-medium !font-sans",
+              "!leading-[0] !shadow-none !rounded-none !bg-toast-action-button-background hover:!bg-toast-action-button-background !text-toast-action-button-foreground !font-medium !font-sans",
             cancelButton:
-              "!leading-[0] !shadow-none !rounded-sm !bg-toast-cancel-button-background hover:!bg-toast-foreground !text-toast-cancel-button-foreground !font-medium !font-sans",
+              "!leading-[0] !shadow-none !rounded-none !bg-toast-cancel-button-background hover:!bg-toast-cancel-button-background !text-toast-cancel-button-foreground !font-medium !font-sans",
           },
         }}
         {...props}

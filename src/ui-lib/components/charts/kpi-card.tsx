@@ -32,7 +32,7 @@ const KpiCard: FC<KpiCardProps> = ({
           <div className="text-2xl font-bold">{value}</div>
           {change && (
             <div
-              className={`ml-2 text-xs font-semibold ${
+              className={`ml-2 text-xs font-medium ${
                 changeType === KpiCardChangeType.Positive
                   ? "text-positive"
                   : changeType === KpiCardChangeType.Negative

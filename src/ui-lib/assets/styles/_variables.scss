@@ -2,7 +2,7 @@
 @use "sass:color";
 @use "functions";
 
-$font-family-sans: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans: "Zalando Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-family-mono: ui-monospace, sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
 
 $font-sizes: (
@@ -30,6 +30,7 @@ $common-color-palette: (
   gradient-main-dark-start: hsl(240, 7%, 11%),
   gradient-main-light-end: hsl(240, 7%, 66%),
   gradient-main-dark-end: hsl(240, 7%, 33%),
+
   bright-pink: hsl(342, 100%, 47%),
   electric-blue: hsl(184, 96%, 53%),
   dark-yellow: hsl(63, 97%, 57%),
@@ -102,14 +103,16 @@ $dark-color-palette: (
   sidebar-border: hsl(240, 4%, 17%),
   sidebar-ring: hsl(240, 5%, 64.9%),
 
-  toast-background: hsl(240, 7%, 24%),
-  toast-border: hsl(240, 7%, 26%),
+  toast-background: hsl(240, 7%, 11%),
+  toast-border: hsl(240, 4%, 17%),
   toast-foreground: hsl(240, 4%, 98%),
   toast-muted-foreground: hsl(240, 4%, 66%),
-  toast-action-button-background: hsl(240, 2%, 80%),
-  toast-action-button-foreground: hsl(240, 4%, 11%),
-  toast-cancel-button-background: hsl(240, 2%, 80%),
-  toast-cancel-button-foreground: hsl(240, 4%, 11%),
+  toast-action-button-background: hsl(240, 4%, 98%),
+  toast-action-button-foreground: hsl(240, 2%, 17%),
+  toast-cancel-button-background: hsl(240, 4%, 98%),
+  toast-cancel-button-foreground: hsl(240, 2%, 17%),
+
+  overlay: hsl(240, 7%, 11%),
 
   tooltip-background: hsl(240, 7%, 24%),
   tooltip-foreground: hsl(240, 4%, 98%),
@@ -180,14 +183,16 @@ $light-color-palette: (
   sidebar-border: hsl(240, 2%, 89%),
   sidebar-ring: hsl(240, 5%, 64.9%),
 
-  toast-background: hsl(240, 7%, 36%),
-  toast-border: hsl(240, 7%, 39%),
-  toast-foreground: hsl(240, 4%, 98%),
-  toast-muted-foreground: hsl(240, 4%, 66%),
-  toast-action-button-background: hsl(240, 2%, 80%),
-  toast-action-button-foreground: hsl(240, 4%, 11%),
-  toast-cancel-button-background: hsl(240, 2%, 80%),
-  toast-cancel-button-foreground: hsl(240, 4%, 11%),
+  toast-background: hsl(0, 0%, 100%),
+  toast-border: hsl(240, 2%, 89%),
+  toast-foreground: hsl(240, 7%, 11%),
+  toast-muted-foreground: hsl(240, 6%, 46.1%),
+  toast-action-button-background: hsl(240, 7%, 11%),
+  toast-action-button-foreground: hsl(240, 4%, 98%),
+  toast-cancel-button-background: hsl(240, 7%, 11%),
+  toast-cancel-button-foreground: hsl(240, 4%, 98%),
+
+  overlay: hsl(240, 10%, 96%),
 
   tooltip-background: hsl(240, 7%, 36%),
   tooltip-foreground: hsl(240, 4%, 98%),

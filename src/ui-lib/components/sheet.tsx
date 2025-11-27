@@ -39,7 +39,7 @@ const SheetOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
     className={cn(
-      "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 bg-eerie-black/80 fixed inset-0 z-50 will-change-[opacity,transform]",
+      "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 bg-overlay/60 dark:bg-eerie-black/80 fixed inset-0 z-50 will-change-[opacity,transform]",
       className,
     )}
     {...props}
@@ -88,7 +88,7 @@ const SheetContent = React.forwardRef<
       className={cn(sheetVariants({ side }), className)}
       {...props}
     >
-      <div className={cn("relative overflow-hidden rounded-lg border w-full h-full gap-y-6 flex flex-col bg-background shadow-sm p-6", className)}>
+      <div className={cn("relative overflow-hidden border w-full h-full gap-y-6 flex flex-col bg-background shadow-sm p-6", className)}>
         {children}
         {!hideClose && <SheetClose className="absolute right-4 top-4" />}
       </div>
@@ -134,7 +134,7 @@ const SheetTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
     ref={ref}
-    className={cn("text-foreground text-lg font-semibold", className)}
+    className={cn("text-foreground text-lg font-medium", className)}
     {...props}
   />
 ));

@@ -7,9 +7,9 @@ interface ComponentSourceProps {
 }
 
 const ComponentSource: FC<ComponentSourceProps> = ({ code }) => (
-    <CodeBlock language="tsx" className="mt-5">
-      {code}
-    </CodeBlock>
+  <CodeBlock language="tsx" className="mt-5">
+    {code}
+  </CodeBlock>
 );
 
 export { ComponentSource };

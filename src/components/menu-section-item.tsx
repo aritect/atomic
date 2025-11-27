@@ -10,7 +10,7 @@ import { cn } from "@/utils-ui-lib/classnames";
 const menuSectionItemVariants = cva(
   cn(
     "text-muted-foreground group text-sm flex items-center gap-x-2 truncate block",
-    "data-[active=true]:font-semibold data-[active=true]:text-highlight-foreground",
+    "data-[active=true]:font-medium data-[active=true]:text-highlight-foreground",
   ),
   {
     variants: {

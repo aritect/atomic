@@ -2,9 +2,6 @@ name: Reusable release (bun)
 
 on:
   workflow_call:
-    secrets:
-      NPM_TOKEN:
-        required: true
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

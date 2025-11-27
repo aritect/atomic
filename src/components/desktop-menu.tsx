@@ -7,7 +7,7 @@ import {
   NavigationMenuList,
 } from "@/components-ui-lib/navigation-menu";
 
-const linkStyle = "text-sm font-semibold py-2 m-0 text-muted-foreground hover:text-foreground duration-global data-[active]:text-foreground";
+const linkStyle = "text-sm font-base py-2 m-0 text-muted-foreground hover:text-foreground duration-global data-[active]:text-foreground";
 
 interface DesktopMenuProps {
   pathname: string;

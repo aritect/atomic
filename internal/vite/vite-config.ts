@@ -61,6 +61,7 @@ const getEntries = () => {
 
   return {
     index: path.resolve(INPUT_DIR, "index.ts"),
+    icons: path.resolve(INPUT_DIR, "icons.ts"),
     "tailwind-preset": path.resolve(INPUT_INTERNAL_DIR, "tailwind/tailwind-preset.ts"),
   };
 };

@@ -42,7 +42,6 @@ export const COMPONENT_SOURCES = {
   slider: "src/ui-lib/components/slider.tsx",
   switch: "src/ui-lib/components/switch.tsx",
   table: "src/ui-lib/components/table.tsx",
-  "tabs-rounded-full": "src/ui-lib/components/tabs.tsx",
   tabs: "src/ui-lib/components/tabs.tsx",
   toast: "src/ui-lib/components/toast.tsx",
   toggle: "src/ui-lib/components/toggle.tsx",
@@ -52,7 +51,5 @@ export const COMPONENT_SOURCES = {
   "bar-chart": "src/ui-lib/components/bar-chart.tsx",
   "kpi-card": "src/ui-lib/components/kpi-card.tsx",
   "context-menu": "src/ui-lib/components/context-menu.tsx",
-  "svg-mask-effect": "src/ui-lib/components/svg-mask-effect.tsx",
-  "text-hover-effect": "src/ui-lib/components/text-hover-effect.tsx",
   "scramble": "src/ui-lib/components/scramble.tsx",
 };

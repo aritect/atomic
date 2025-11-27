@@ -127,6 +127,7 @@ export default {
           background: "hsl(var(--tooltip-background))",
           foreground: "hsl(var(--tooltip-foreground))",
         },
+        overlay: "hsl(var(--overlay))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -209,6 +210,8 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
+        "menu-open": "menu-open 0.1s ease-out",
+        "menu-close": "menu-close 0.1s ease-out",
       },
     },
   },

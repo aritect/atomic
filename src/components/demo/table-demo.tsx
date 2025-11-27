@@ -11,8 +11,8 @@ import { GlobeIcon } from "@/icons-ui-lib/globe-icon";
 import { LockIcon } from "@/icons-ui-lib/lock-icon";
 import { SmartphoneIcon } from "@/icons-ui-lib/smartphone-icon";
 import { UnplugIcon } from "@/icons-ui-lib/unplug-icon";
-import { cn } from "@/utils-ui-lib/classnames";
 import { round } from "@/utils-ui-lib/round";
+import { Badge } from "@/components-ui-lib/badge";
 
 enum TestStatus {
   OK = "OK",
@@ -179,16 +179,9 @@ const TEST_TYPE_ICON = {
 function StatusCell({ status }: { status: TestStatus }) {
   return (
     <TableCell className="w-[90px]">
-      <div
-        className={cn(
-          "text-xs w-[80px] leading-[0] rounded-full py-3.5 text-center font-medium uppercase",
-          status === TestStatus.OK && "bg-positive-highlight text-positive-highlight-foreground",
-          status === TestStatus.Alert && "bg-destructive-highlight text-destructive-highlight-foreground",
-          status === TestStatus.Paused && "bg-neutral-highlight text-neutral-highlight-foreground",
-        )}
-      >
+      <Badge variant={status === TestStatus.OK ? "outline-default" : "outline-destructive"}>
         {status}
-      </div>
+      </Badge>
     </TableCell>
   );
 }
@@ -211,7 +204,7 @@ function TagsCell({ tags, className }: { tags: string[]; className?: string }) {
     <TableCell className={className}>
       <div className="flex items-center gap-x-1.5">
         {tags.map((tag, i) => (
-          <div className="bg-muted rounded-sm px-1.5 py-1" key={i}>
+          <div className="bg-muted text-xs px-1.5 py-1" key={i}>
             {tag}
           </div>
         ))}
@@ -223,7 +216,7 @@ function TagsCell({ tags, className }: { tags: string[]; className?: string }) {
 function TeamCell({ team }: { team: string }) {
   return (
     <TableCell className="w-[150px]">
-      <span className="rounded-full border px-2 py-1">{team}</span>
+      <Badge variant="outline-default">{team}</Badge>
     </TableCell>
   );
 }
@@ -232,7 +225,7 @@ function UptimeCell({ uptime }: { uptime: number | null }) {
   return (
     <TableCell className="max-w-[120px]">
       {uptime === null && (
-        <span className="text-muted-foreground whitespace-nowrap italic">
+        <span className="text-muted-foreground whitespace-nowrap">
           No uptime data
         </span>
       )}
@@ -276,7 +269,7 @@ const getTimeAgo = (timestamp: string) => {
 };
 
 const TableDemo = () => (
-    <div className="overflow-auto rounded-lg border">
+    <div className="overflow-auto border">
       <Table className="w-max">
         <TableHeader>
           <TableRow>

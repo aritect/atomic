@@ -54,7 +54,6 @@ interface BarChartProps {
     showTooltip?: boolean;
     showTrend?: boolean;
     showLegend?: boolean;
-    hoverColor?: string;
     barSize?: number;
     minWidth?: number;
     useScrollArea?: boolean;
@@ -92,7 +91,7 @@ const BarChartTooltip: FC<BarChartTooltipProps> = ({ payload, active }) => {
   );
 
   return (
-    <div className="bg-background w-[270px] rounded-lg border shadow-sm">
+    <div className="bg-background w-[270px] border shadow-sm">
       <div className="flex items-center justify-between border-b-[1px] px-4 py-2">
         <p className="text-xs font-medium">{meta.title}</p>
         {meta.showTrend && trend && trend.variant !== BarChartTrend.Stable && (
@@ -108,7 +107,7 @@ const BarChartTooltip: FC<BarChartTooltipProps> = ({ payload, active }) => {
           <div key={key} className="flex justify-between">
             <div className="flex items-center justify-center space-x-2">
               <div
-                className="h-[8px] w-[8px] rounded-[2px]"
+                className="h-[8px] w-[8px]"
                 style={
                   value < 0
                     ? { backgroundColor: meta.negativeHSLDistribution[index] }
@@ -131,7 +130,6 @@ interface BarChartLegendProps {
   items: string[];
   colors: string[];
   hoveredGroup: string | null;
-  hoverColor?: string;
   onHover: (group: string | null) => void;
 }
 
@@ -139,12 +137,12 @@ const BarChartLegend: FC<BarChartLegendProps> = ({
   items,
   colors,
   hoveredGroup,
-  hoverColor,
   onHover,
 }) => {
   return (
     <div className="flex flex-wrap items-start justify-start gap-0 md:gap-1 pt-2">
       {items.map((item, index) => {
+        const isAnyHovered = hoveredGroup && hoveredGroup !== item;
         const isHovered = hoveredGroup === item;
         return (
           <div
@@ -154,9 +152,9 @@ const BarChartLegend: FC<BarChartLegendProps> = ({
             onMouseLeave={() => onHover(null)}
           >
             <div
-              className="h-[10px] w-[10px] rounded-[2px]"
+              className="h-[10px] w-[10px]"
               style={{
-                backgroundColor: isHovered && hoverColor ? hoverColor : colors[index]
+                backgroundColor: isHovered ? colors[colors.length - 1] : isAnyHovered ? colors[0] : colors[index],
               }}
             />
             <p className="text-xs">{item}</p>
@@ -348,7 +346,6 @@ const BarChart: FC<BarChartProps> = ({
             barSize={meta.barSize || 16}
             isAnimationActive={false}
             dataKey={`group.${name}`}
-            radius={index === meta.knownNames.length - 1 ? [3, 3, 0, 0] : [0, 0, 0, 0]}
           >
             {formattedDataset.map((entry, entryIndex) => {
               const baseColor = entry.group[name] > 0
@@ -356,15 +353,19 @@ const BarChart: FC<BarChartProps> = ({
                 : negativeHSLDistribution[index];
 
               const isHovered = hoveredGroup === name;
+              const isAnyHovered = hoveredGroup && hoveredGroup !== name;
 
               let fillColor = baseColor;
               let strokeColor = baseColor;
 
-              if (meta.hoverColor) {
-                if (isHovered) {
-                  fillColor = meta.hoverColor;
-                  strokeColor = meta.hoverColor;
-                }
+              if (isAnyHovered) {
+                fillColor = neutralHSLDistribution[0];
+                strokeColor = neutralHSLDistribution[0];
+              }
+
+              if (isHovered) {
+                fillColor = neutralHSLDistribution[neutralHSLDistribution.length - 1];
+                strokeColor = neutralHSLDistribution[neutralHSLDistribution.length - 1];
               }
 
               return (
@@ -396,7 +397,6 @@ const BarChart: FC<BarChartProps> = ({
           items={meta.knownNames}
           colors={neutralHSLDistribution}
           hoveredGroup={hoveredGroup}
-          hoverColor={meta.hoverColor}
           onHover={setHoveredGroup}
         />
       )}

@@ -29,7 +29,7 @@ const HorizontalSegmentedChart: FC<HorizontalSegmentedChartProps> = ({ className
         return (
           <div
             key={i}
-            className={"flex items-center justify-center h-[24px] flex-grow first:rounded-l-[4px] last:rounded-r-[4px]"}
+            className={"flex items-center justify-center h-[24px] flex-grow"}
             style={{
               width: `${width}%`,
               backgroundColor: hslDistribution[i],

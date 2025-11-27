@@ -4,7 +4,7 @@ import { AspectRatio } from "@/components-ui-lib/aspect-ratio";
 import { Image } from "@/components-ui-lib/image";
 
 const AspectRatioDemo = () => (
-    <AspectRatio ratio={16 / 9} className="bg-muted overflow-hidden rounded-md">
+    <AspectRatio ratio={16 / 9} className="bg-muted overflow-hidden">
       <Image
         src="/black-sand.jpg"
         className="absolute inset-0 h-full w-full object-cover"

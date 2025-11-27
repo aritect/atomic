@@ -38,7 +38,7 @@ const DialogDemo = () => (
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit">Save Changes</Button>
+          <Button type="submit">Save</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

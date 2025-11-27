@@ -1,6 +1,5 @@
 ---
 import "@/assets-ui-lib/styles/main.scss";
-import "@/assets-ui-lib/styles/fonts.scss";
 import "@/assets/styles/main.scss";
 
 import { Footer } from "@/components/footer";
@@ -60,6 +59,12 @@ const { primitivesMenuItems, compositesMenuItems, chartsMenuItems } = meta.menu;
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/atomic.webmanifest" />
     <link rel="canonical" href={meta.canonical} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>

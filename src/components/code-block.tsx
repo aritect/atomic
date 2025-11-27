@@ -39,7 +39,7 @@ const CodeBlockWrapper: FC<
   return (
     <div
       className={cn(
-        "bg-border/30 relative overflow-hidden rounded-lg border",
+        "bg-border/30 relative overflow-hidden border",
         className,
       )}
     >

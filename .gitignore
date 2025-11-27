@@ -49,5 +49,11 @@ internal/vite/entries.json
 .astro
 
 # environment
+.nexusrc
 .npmrc
 .env
+
+# icons
+src/ui-lib/icons
+src/ui-lib/icons-export
+src/ui-lib/assets/images/icons

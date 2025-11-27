@@ -10,7 +10,7 @@ const renderDemoItem = (id: string, href: string, Component: React.ComponentType
   <div
     key={id}
     className={cn(
-      "duration-global group relative flex h-[420px] items-center justify-center rounded-lg border border-opacity-80 p-6 transition-colors",
+      "duration-global group relative flex h-[420px] items-center justify-center border border-opacity-80 p-6 transition-colors",
       "md:hover:border-border md:hover:bg-accent/30",
     )}
   >

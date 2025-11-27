@@ -57,7 +57,7 @@
         "./src/ui-lib/types"
       ],
       "@/icons-ui-lib/*": [
-        "./src/ui-lib/icons/*"
+        "./src/ui-lib/icons-free/*"
       ],
       "@/hooks-ui-lib/*": [
         "./src/ui-lib/hooks/*"

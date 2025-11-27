@@ -4,7 +4,7 @@ import { Button } from "@/components-ui-lib/button";
 import { GradientText } from "@/components-ui-lib/gradient-text";
 import { Link } from "@/components-ui-lib/link";
 import { cn } from "@/utils-ui-lib/classnames";
-import { SparklesIcon } from "@/icons-ui-lib/sparkles-icon";
+import { ArrowUpRightIcon } from "@/icons-ui-lib/arrow-up-right-icon";
 
 const Hero = () => {
   return (
@@ -52,13 +52,13 @@ const Hero = () => {
             Ship faster with production-ready components, accessible primitives, and battle-tested patterns.
           </p>
           <div className="flex space-x-4">
-            <Button rounded="full" asChild>
+            <Button asChild>
               <Link href="/docs/introduction">Introduction</Link>
             </Button>
-            <Button rounded="full" variant="ghost">
+            <Button variant="outline">
               <Link className="flex items-center" href="/docs/components/primitives/accordion">
-                <SparklesIcon className="size-4 mr-1.5" />
                 Components
+                <ArrowUpRightIcon className="ml-2 size-4" />
               </Link>
             </Button>
           </div>

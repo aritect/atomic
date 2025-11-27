@@ -16,7 +16,7 @@ const components: MDXComponents = {
       | undefined;
 
     return (
-      <h2 className="mb-5 mt-16 text-xl font-bold">
+      <h2 className="mb-5 mt-16 text-xl font-medium">
         <Id id={textToHtmlId(childElement?.props.value?.toString())} />
         {props.children}
       </h2>
@@ -30,7 +30,7 @@ const components: MDXComponents = {
       | undefined;
 
     return (
-      <h3 className="mb-5 mt-8 text-lg font-bold">
+      <h3 className="mb-5 mt-8 text-lg font-medium">
         <Id id={textToHtmlId(childElement?.props.value?.toString())} />
         {props.children}
       </h3>

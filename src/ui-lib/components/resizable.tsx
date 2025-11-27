@@ -40,7 +40,7 @@ const ResizableHandle = ({
     {...props}
   >
     {withHandle && (
-      <div className="bg-border z-10 flex h-5 w-4 items-center justify-center rounded-sm border shrink-0">
+      <div className="bg-border z-10 flex h-5 w-4 items-center justify-center border shrink-0">
         <DragDropVerticalIcon variant="solid" className="h-3 w-3" />
       </div>
     )}

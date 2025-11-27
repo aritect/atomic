@@ -196,7 +196,7 @@ const ChartTooltipContent = forwardRef<
       <div
         ref={ref}
         className={cn(
-          "grid min-w-[8rem] items-start gap-1.5 rounded-lg border bg-background px-4 py-3 text-xs shadow-sm",
+          "grid min-w-[8rem] items-start gap-1.5 border bg-background px-4 py-3 text-xs shadow-sm",
           {
             "px-2.5 py-1.5": payload.length === 1,
           },
@@ -219,7 +219,7 @@ const ChartTooltipContent = forwardRef<
                   : (
                     <>
                       <div
-                        className={"shrink-0 h-[8px] w-[8px] rounded-[2px]"}
+                        className={"shrink-0 h-[8px] w-[8px]"}
                         style={{ backgroundColor: indicatorColor }}
                       />
                       <div
@@ -290,7 +290,7 @@ const ChartLegendContent = forwardRef<
               className={"flex items-center gap-1.5 text-xs"}
             >
               <div
-                className="h-[8px] w-[8px] shrink-0 rounded-[2px]"
+                className="h-[8px] w-[8px] shrink-0"
                 style={{
                   backgroundColor: item.color,
                 }}

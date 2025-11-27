@@ -13,7 +13,7 @@ const ResizableDemo = () => (
     >
       <ResizablePanel defaultSize={50}>
         <div className="flex h-56 items-center justify-center p-6">
-          <p className="text-4 font-semibold">One</p>
+          <p className="text-4">One</p>
         </div>
       </ResizablePanel>
       <ResizableHandle withHandle />
@@ -21,13 +21,13 @@ const ResizableDemo = () => (
         <ResizablePanelGroup direction="vertical">
           <ResizablePanel defaultSize={25}>
             <div className="flex h-full items-center justify-center p-6">
-              <p className="text-4 font-semibold">Two</p>
+              <p className="text-4">Two</p>
             </div>
           </ResizablePanel>
           <ResizableHandle withHandle />
           <ResizablePanel defaultSize={75}>
             <div className="flex h-full items-center justify-center p-6">
-              <p className="text-4 font-semibold">Three</p>
+              <p className="text-4">Three</p>
             </div>
           </ResizablePanel>
         </ResizablePanelGroup>

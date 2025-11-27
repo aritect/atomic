@@ -42,7 +42,7 @@ const SheetDemo = () => (
         </div>
         <SheetFooter>
           <SheetClosePrimitive asChild>
-            <Button type="submit">Save Changes</Button>
+            <Button type="submit">Save</Button>
           </SheetClosePrimitive>
         </SheetFooter>
       </SheetContent>

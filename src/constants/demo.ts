@@ -30,7 +30,7 @@ export const DEMO = [
   {
     id: "pie-chart",
     href: "/docs/components/charts/pie-chart",
-    
+
     Component: PieChartDemo,
     type: "chart",
   },

@@ -16,7 +16,6 @@ import { BarChartPositiveDemo } from "@/components/demo/bar-chart-positive-demo"
 import { BarChartThinDemo } from "@/components/demo/bar-chart-thin-demo";
 import { BreadcrumbDemo } from "@/components/demo/breadcrumb-demo";
 import { ButtonDemo } from "@/components/demo/button-demo";
-import { ButtonDestructiveDemo } from "@/components/demo/button-destructive-demo";
 import {
   FunnyButtonDemo,
   FunnyButtonIconDemo,
@@ -24,9 +23,6 @@ import {
   FunnyButtonSmallDemo,
   FunnyButtonExtraLargeDemo,
 } from "@/components/demo/funny-button-demo";
-import { ButtonPositiveDemo } from "@/components/demo/button-positive-demo";
-import { ButtonWarningDemo } from "@/components/demo/button-warning-demo";
-import { ButtonNeutralDemo } from "@/components/demo/button-neutral-demo";
 import { ButtonGhostDemo } from "@/components/demo/button-ghost-demo";
 import { ButtonLinkDemo } from "@/components/demo/button-link-demo";
 import { ButtonOutlineDemo } from "@/components/demo/button-outline-demo";
@@ -72,7 +68,7 @@ import { SkeletonDemo } from "@/components/demo/skeleton-demo";
 import { SliderDemo } from "@/components/demo/slider-demo";
 import { SwitchDemo } from "@/components/demo/switch-demo";
 import { TableDemo } from "@/components/demo/table-demo";
-import { TabsDemo, TabsRoundedFullDemo } from "@/components/demo/tabs-demo";
+import { TabsDemo } from "@/components/demo/tabs-demo";
 import { TextareaDemo } from "@/components/demo/textarea-demo";
 import { ToastActionDemo } from "@/components/demo/toast-action-demo";
 import { ToastCancelDemo } from "@/components/demo/toast-cancel-demo";
@@ -83,8 +79,6 @@ import { ToastSuccessDemo } from "@/components/demo/toast-success-demo";
 import { ToggleDemo } from "@/components/demo/toggle-demo";
 import { ToggleGroupDemo } from "@/components/demo/toggle-group-demo";
 import { TooltipDemo } from "@/components/demo/tooltip-demo";
-import { SVGMaskEffectDemo } from "@/components/demo/svg-mask-effect-demo";
-import { TextHoverEffectDemo } from "@/components/demo/text-hover-effect-demo";
 import { ScrambleDemo } from "@/components/demo/scramble-demo";
 
 export const COMPONENT_PREVIEWS = {
@@ -179,22 +173,6 @@ export const COMPONENT_PREVIEWS = {
   "button-link": {
     PreviewComponent: ButtonLinkDemo,
     path: "src/components/demo/button-link-demo.tsx",
-  },
-  "button-destructive": {
-    PreviewComponent: ButtonDestructiveDemo,
-    path: "src/components/demo/button-destructive-demo.tsx",
-  },
-  "button-positive": {
-    PreviewComponent: ButtonPositiveDemo,
-    path: "src/components/demo/button-positive-demo.tsx",
-  },
-  "button-neutral": {
-    PreviewComponent: ButtonNeutralDemo,
-    path: "src/components/demo/button-neutral-demo.tsx",
-  },
-  "button-warning": {
-    PreviewComponent: ButtonWarningDemo,
-    path: "src/components/demo/button-warning-demo.tsx",
   },
   calendar: {
     PreviewComponent: CalendarDemo,
@@ -336,10 +314,6 @@ export const COMPONENT_PREVIEWS = {
     PreviewComponent: TabsDemo,
     path: "src/components/demo/tabs-demo.tsx",
   },
-  "tabs-rounded-full": {
-    PreviewComponent: TabsRoundedFullDemo,
-    path: "src/components/demo/tabs-demo.tsx",
-  },
   textarea: {
     PreviewComponent: TextareaDemo,
     path: "src/components/demo/textarea-demo.tsx",
@@ -423,14 +397,6 @@ export const COMPONENT_PREVIEWS = {
   "money-value": {
     PreviewComponent: MoneyValueDemo,
     path: "src/components/demo/money-value-demo.tsx",
-  },
-  "svg-mask-effect": {
-    PreviewComponent: SVGMaskEffectDemo,
-    path: "src/components/demo/svg-mask-effect-demo.tsx",
-  },
-  "text-hover-effect": {
-    PreviewComponent: TextHoverEffectDemo,
-    path: "src/components/demo/text-hover-effect-demo.tsx",
   },
   "scramble": {
     PreviewComponent: ScrambleDemo,

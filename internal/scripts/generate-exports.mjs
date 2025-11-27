@@ -44,8 +44,8 @@ const getComponents = () => {
   return components;
 };
 
-const getIcons = () => {
-  const iconsDir = path.join(UI_LIB_DIR, "icons");
+const getIcons = (iconsDirName) => {
+  const iconsDir = path.join(UI_LIB_DIR, iconsDirName);
 
   if (!fs.existsSync(iconsDir)) {
     console.warn("icons directory not found.");
@@ -59,13 +59,13 @@ const getIcons = () => {
     if (file !== "index.ts" && file.endsWith(".ts")) {
       const kebabName = file.replace(".ts", "");
       const content = fs.readFileSync(path.join(iconsDir, file), "utf-8");
-      const match = /export\s+const\s+(\w+)\s*=/.exec(content);
+      const match = (iconsDirName === "icons-free" ? /export\s+const\s+(\w+)\s*=/ : /export\s+{\s*default\s+as\s+(\w+)\s*}/).exec(content);
 
       if (match) {
         const iconName = match[1];
         icons.push({
           name: iconName,
-          path: `./icons/${kebabName}`,
+          path: `./${iconsDirName}/${kebabName}`,
           exportName: kebabName,
         });
       }
@@ -113,9 +113,9 @@ const getUtils = () => {
   return utils;
 };
 
-const generatePackageExports = () => {
+const generatePackageExports = (iconsDirName) => {
   const components = getComponents();
-  const icons = getIcons();
+  const icons = getIcons(iconsDirName);
   const hooks = getHooks();
   const utils = getUtils();
 
@@ -126,7 +126,6 @@ const generatePackageExports = () => {
       types: "./target/types/internal/tailwind/tailwind-preset.d.ts",
     },
     "./scss": "./target/assets/styles/main.scss",
-    "./llm-docs": "./target/llm-docs",
   };
 
   for (const component of components) {
@@ -143,7 +142,7 @@ const generatePackageExports = () => {
     exports[exportPath] = {
       import: `./target/icons/${icon.exportName}.es.js`,
       require: `./target/icons/${icon.exportName}.cjs.js`,
-      types: `./target/types/src/ui-lib/icons/${icon.exportName}.d.ts`,
+      types: `./target/types/src/ui-lib/${iconsDirName}/${icon.exportName}.d.ts`,
     };
   }
 
@@ -168,9 +167,9 @@ const generatePackageExports = () => {
   return exports;
 };
 
-const generateViteEntries = () => {
+const generateViteEntries = (iconsDirName) => {
   const components = getComponents();
-  const icons = getIcons();
+  const icons = getIcons(iconsDirName);
   const hooks = getHooks();
   const utils = getUtils();
 
@@ -188,7 +187,7 @@ const generateViteEntries = () => {
   for (const icon of icons) {
     entries[`icons/${icon.exportName}`] = path.resolve(
       UI_LIB_DIR,
-      `icons/${icon.exportName}.ts`
+      `${iconsDirName}/${icon.exportName}.ts`
     );
   }
 
@@ -206,18 +205,18 @@ const generateViteEntries = () => {
   return entries;
 };
 
-const updatePackageJson = () => {
+const updatePackageJson = (iconsDirName) => {
   const packageJsonPath = path.join(ROOT_DIR, "package.json");
   const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
 
-  packageJson.exports = generatePackageExports();
+  packageJson.exports = generatePackageExports(iconsDirName);
 
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + "\n");
   console.log("package.json updated");
 };
 
-const saveViteEntries = () => {
-  const entries = generateViteEntries();
+const saveViteEntries = (iconsDirName) => {
+  const entries = generateViteEntries(iconsDirName);
   const outputPath = path.join(__dirname, "../vite/entries.json");
 
   fs.writeFileSync(outputPath, JSON.stringify(entries, null, 2));
@@ -227,8 +226,11 @@ const saveViteEntries = () => {
 const main = () => {
   console.log("Generating exports...\n");
 
+  const args = process.argv.slice(2);
+  const iconsDir = args.includes("--icons-export") ? "icons-export" : "icons-free";
+
   const components = getComponents();
-  const icons = getIcons();
+  const icons = getIcons(iconsDir);
   const hooks = getHooks();
   const utils = getUtils();
 
@@ -237,8 +239,8 @@ const main = () => {
   console.log(`Found hooks: ${hooks.length}`);
   console.log(`Found utils: ${utils.length}\n`);
 
-  updatePackageJson();
-  saveViteEntries();
+  updatePackageJson(iconsDir);
+  saveViteEntries(iconsDir);
 
   console.log("\nDone!");
 };

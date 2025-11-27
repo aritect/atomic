@@ -38,13 +38,14 @@ const defaultAttributes = {
 const createIconComponent = (
   iconName: string,
   svgObjects: {[ variant: string ]: IconSvgObject},
+  defaultVariant: "stroke" | "solid" = "solid",
 ): FC<PropsWithoutRef<IconsProps> & RefAttributes<SVGSVGElement>> => {
   const Component = forwardRef<SVGSVGElement, IconsProps>((
     {
       color = "currentColor",
       size = 24,
       strokeWidth = 1.5,
-      variant = "stroke",
+      variant = defaultVariant,
       type = "rounded",
       className = "",
       children,

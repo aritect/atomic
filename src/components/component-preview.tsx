@@ -27,7 +27,7 @@ const ComponentPreview: FC<ComponentPreviewProps> = ({ code, id }) => {
   return (
     <Tabs
       defaultValue="preview"
-      className="mt-4 overflow-visible rounded-lg border"
+      className="mt-4 overflow-visible border"
     >
       <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
         <TabsTrigger value="preview" className={tabsTriggerStyles}>
