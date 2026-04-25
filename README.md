@@ -1,6 +1,6 @@
 # Atomic
 
-A modern, comprehensive design system built for [Aritect](https://aritect.com) — an advanced platform leveraging hybrid intelligence to transform investment strategies in decentralized finance.
+A modern, comprehensive design system built for [Aritect](https://aritect.com) – an advanced platform leveraging hybrid intelligence to transform investment strategies in decentralized finance.
 
 Built with ❤️ by the Aritect team.
 
@@ -10,15 +10,15 @@ Atomic is a production-ready React component library built with TypeScript, Tail
 
 ## Features
 
-- **🎨 60+ Components** — From basic UI elements to complex data visualizations.
-- **📊 Advanced Charts** — Built-in chart components for financial data visualization.
-- **♿ Accessible** — WCAG compliant components with proper ARIA attributes.
-- **🎯 Type-Safe** — Full TypeScript support with comprehensive type definitions.
-- **🌗 Dark Mode** — Built-in dark mode support with seamless theme switching.
-- **📱 Responsive** — Mobile-first design with responsive utilities.
-- **🎭 Customizable** — Tailwind CSS-based styling for easy customization.
-- **⚡ Performance** — Optimized bundle sizes with tree-shaking support.
-- **🔧 Developer Experience** — Intuitive API with excellent IDE support.
+- **🎨 60+ Components** – From basic UI elements to complex data visualizations.
+- **📊 Advanced Charts** – Built-in chart components for financial data visualization.
+- **♿ Accessible** – WCAG compliant components with proper ARIA attributes.
+- **🎯 Type-Safe** – Full TypeScript support with comprehensive type definitions.
+- **🌗 Dark Mode** – Built-in dark mode support with seamless theme switching.
+- **📱 Responsive** – Mobile-first design with responsive utilities.
+- **🎭 Customizable** – Tailwind CSS-based styling for easy customization.
+- **⚡ Performance** – Optimized bundle sizes with tree-shaking support.
+- **🔧 Developer Experience** – Intuitive API with excellent IDE support.
 
 ## Installation
 
